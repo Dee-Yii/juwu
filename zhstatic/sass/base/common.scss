@@ -1,6 +1,7 @@
 @import
 "_mixin",
-"_variables";
+"_variables",
+"base";
 
 nav{
     position: fixed;
@@ -11,4 +12,7 @@ nav{
 .layout{
     width: $mainWidth;
     margin: 0 auto;
+}
+.mini-layout{
+    width: $miniWidth;
 }
