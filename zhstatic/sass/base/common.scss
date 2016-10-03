@@ -16,3 +16,7 @@ nav{
 .mini-layout{
     width: $miniWidth;
 }
+input[type=text]{
+    border: 1px solid $baseBorder;
+    height: 26px;
+}
