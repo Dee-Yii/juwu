@@ -2,6 +2,12 @@
 "_mixin",
 "_variables";
 
+nav{
+    position: fixed;
+    width: 100%;
+    height: 79px;
+    border-bottom: 1px solid #ccc;
+}
 .layout{
     width: $mainWidth;
     margin: 0 auto;
