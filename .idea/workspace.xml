@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5595510-ea0b-43be-8a0b-e1903e693bb9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/zd/pubActivity.html" afterPath="$PROJECT_DIR$/views/zd/pubActivity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhstatic/css/base/common.min.css" afterPath="$PROJECT_DIR$/zhstatic/css/base/common.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhstatic/css/pubActivity.min.css" afterPath="$PROJECT_DIR$/zhstatic/css/pubActivity.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhstatic/css/userCenter.min.css" afterPath="$PROJECT_DIR$/zhstatic/css/userCenter.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhstatic/sass/base/_variables.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/base/_variables.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhstatic/sass/base/common.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/base/common.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zhstatic/sass/pubActivity.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/pubActivity.scss" />
@@ -25,51 +30,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pubActivity.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/zd/pubActivity.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pubActivity.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhstatic/css/pubActivity.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="pubActivity.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhstatic/sass/pubActivity.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.125">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="-12.5">
+              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pubArticle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/zd/pubArticle.html">
+      <file leaf-file-name="pubActivity.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/zd/pubActivity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.625">
-              <caret line="21" column="90" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="90" />
+            <state vertical-scroll-proportion="0.73721343">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="common.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="common.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zhstatic/sass/base/common.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52910054">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state vertical-scroll-proportion="-13.125">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -79,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/zhstatic/sass/base/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -108,10 +93,10 @@
         <option value="$PROJECT_DIR$/zhstatic/js/config.js" />
         <option value="$PROJECT_DIR$/views/zd/index.html" />
         <option value="$PROJECT_DIR$/zhstatic/sass/userCenter.scss" />
-        <option value="$PROJECT_DIR$/views/zd/pubActivity.html" />
+        <option value="$PROJECT_DIR$/zhstatic/sass/base/common.scss" />
         <option value="$PROJECT_DIR$/zhstatic/sass/base/_variables.scss" />
         <option value="$PROJECT_DIR$/zhstatic/sass/pubActivity.scss" />
-        <option value="$PROJECT_DIR$/zhstatic/sass/base/common.scss" />
+        <option value="$PROJECT_DIR$/views/zd/pubActivity.html" />
       </list>
     </option>
   </component>
@@ -499,14 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/zd/pubActivity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zhstatic/css/pubActivity.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -518,23 +495,31 @@
     <entry file="file://$PROJECT_DIR$/zhstatic/sass/base/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zhstatic/sass/pubActivity.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zhstatic/sass/base/common.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52910054">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhstatic/sass/pubActivity.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/zd/pubActivity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73721343">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
           <folding />
         </state>
       </provider>

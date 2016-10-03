@@ -4,7 +4,27 @@
 "base/base",
 "base/common";
 
-.cover-img{
-    height: 240px;
-    background-color: $inputGray;
+.main-container{
+    .cover-img{
+        margin: 40px 0 0;
+        height: 240px;
+        background-color: $inputGray;
+        text-align: center;
+        line-height:240px;
+        font-size: 14px;
+    }
+    .mini-layout{
+        .from-group{
+            height: 90px;
+            border-bottom: 1px solid $baseBorder;
+            .input-title{
+                margin-top: 25px;
+                border: none;
+                width: 100%;
+                height: 50px;
+                font-size: 26px;
+            }
+        }
+
+    }
 }

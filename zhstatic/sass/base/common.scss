@@ -2,6 +2,9 @@
 "_mixin",
 "_variables",
 "base";
+.main-container{
+    padding-top: 80px;
+}
 
 nav{
     position: fixed;
@@ -15,8 +18,10 @@ nav{
 }
 .mini-layout{
     width: $miniWidth;
+    margin: 0 auto;
 }
 input[type=text]{
     border: 1px solid $baseBorder;
     height: 26px;
+    padding: 0 5px;
 }
