@@ -3,80 +3,23 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>个人设置</title>
-		<script type="text/javascript" src="js/jquery-1.12.3.min.js" ></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-		<script src="js/bootstrap.js"></script>
-		<link rel="stylesheet" href="css/style.css" />
+		<title>个人中心</title>
+		<link rel="stylesheet" href="../../zhstatic/css/userCenter.min.css" />
 	</head>
 <body>
 	<nav class='navbar navbar-default nav_ps'>
 	</nav>
-	<script>
-		$(function(){
-			$(".navbar").load("nav.html")
-		})
-	</script>
-	<div class="content" style="margin-top: 70px;">
-		<div class="row" style="margin-bottom: 20px;">
-			<div class="col-md-2 col-lg-offset-3 gerenziliao1" >个人资料</div>
-			<div class="col-md-2 xiugaimima1">修改密码</div>
-			<div class="col-md-2 tuichudenglu">退出登录</div>
-		</div>
-		<div class="row gerenziliao">
-			<div class="col-md-6 col-lg-offset-3">
-				<div class="row" style="width: 100%;">
-						<ul>
-							<li><div class="grzl_title" style="line-height: 100px;">头像</div><div><img src="" class="grsz_touxiang"><span style="margin-left: 20px;">100*100</span></div></li>
-							<li><div class="grzl_title" style="line-height: 46px;">用户名</div><div><input type="" name="" id="" value="15058100311" /></div></li>
-							<li><div class="grzl_title">真实姓名</div><div><input type="" name="" id="" value="" /><br/><span>您的真实姓名在找回密码或个人页面展示等需要用到</span></div></li>
-							<li><div class="grzl_title">邮箱</div><div><input type="" name="" id="" value="" /><br/><span>当有重要信息时，我们会第一时间发送到您的邮箱</span></div></li>
-							<li><div class="grzl_title">手机</div><div><input type="" name="" id="" value="" /><br/><span>请填写您的手机号，当我们需要电话联系您时，确保我们能联系得到。</span></div></li>
-							<li><div class="grzl_title">国籍</div><div><input type="" name="" id="" value="" /><br/><span>请填写您所在的国籍，方便我们为您提供更优质的服务。</span></div></li>
-							<li><div class="grzl_title">生日</div><div><input type="" name="" id="" value="" /><br/><span>请准确的告知您的生日，请放心，我们会严格保密。</span></div></li>
-							<li><div class="grzl_title" style="line-height: 32px;">性别</div><div><select/><option value ="nan">男</option><option value ="nv">女</option></select><br/><span>在不定期举行的活动中，我们会派送小礼物，您的性别决定您的礼物是什么。</span></div></li>
-							<li><div class="grzl_title">所在城市</div><div><input type="" name="" id="" value="" /><br/><span>方便我们告知您所在城市的最新官方活动</span></div></li>
-						</ul>
-				</div>
-			</div>
-			<!--<script type="text/javascript">
-			function showImage()
-			{
-			    // 获取文件路径
-			    var path = document.getElementById('upload').value;
-			    // 显示文件路径
-			    document.getElementById('imgName').innerHTML = path;
-			    // 创建 img
-			    var img = document.createElement('img');
-			    // 载入图像
-			    img.src = path;
-			    // 插入图像到页面中
-			    document.getElementById('imgPrev').appendChild(img);
-			}
-			</script>-->
-		</div>
-		<div class="row xiugaimima" style="display: none;">
-			<div class="col-md-6 col-lg-offset-3">
-				<form>
-					<div><span style="margin-left: 40px;margin-right: 35px;width: 80px;display: inline-block; color: black;">修改密码</span><input class="password0" style="width: 280px;height: 38px;border-radius: 8px;border: 1px solid #CCCCCC;"/></div>
-					<div><input class="password1"/ style="width: 280px;height: 38px;border-radius: 8px;border: 1px solid #CCCCCC;"></div>
-					<div class="baocunxiugai" style="text-align: center;"><button type="submit" class="xgmmbtn">保存修改</button></div>
-				</form>
-			</div>
-		</div>
-	</div>
-	<script>
-		$(".gerenziliao1").click(function(){
-			$(".xiugaimima").hide();
-			$(".gerenziliao").show();
-		})
-		$(".xiugaimima1").click(function(){
-			$(".gerenziliao").hide();
-			$(".xiugaimima").show();
-		})
-	</script>
+
 	<footer style="margin-top: 40px;">
 	<div class="beian">关于我们 | ©2010-2016 居屋网 | 京ICP备10044767号 | 京公网安备11010102000560号</div>		
 	</footer>
+
+
+    <script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
+	<script>
+		require(['common'], function () {
+			require(['page/userCenter']);
+		});
+	</script>
 </body>
 </html>
