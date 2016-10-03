@@ -5,21 +5,21 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 
 var path = {
-    sass:["./static" + "/sass/**/*.scss"],
-    css:['./static' + '/css/**/*']
+    sass:["./zhstatic" + "/sass/**/*.scss"],
+    css:['./zhstatic' + '/css/**/*']
 };
 
 
 gulp.task('js',function  () {
     return	gulp.src(path.js)
         .pipe(uglify())
-        .pipe(gulp.dest('static/js'))
+        .pipe(gulp.dest('zhstatic/js'))
 });
 
 
 gulp.task('css',function  () {
     return	gulp.src(path.css)
-        .pipe(gulp.dest('static/css'))
+        .pipe(gulp.dest('zhstatic/css'))
 });
 
 gulp.task('sass',function () {
@@ -29,7 +29,7 @@ gulp.task('sass',function () {
             keepSpecialComments: 0
         }))
         .pipe(rename({ extname: '.min.css' }))
-        .pipe(gulp.dest('static' + '/css'));
+        .pipe(gulp.dest('zhstatic' + '/css'));
 });
 
 gulp.task('watch',["sass"],function () {
