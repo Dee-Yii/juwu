@@ -6,8 +6,7 @@
 		<link rel="stylesheet" href="../../zhstatic/css/pubActivity.min.css">
 	</head>
 <body>
-	<nav>
-	</nav>
+	<nav></nav>
 	<div class="main-container layout">
 		<div id="coverImg" class="cover-img">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</div>
 		<div class="mini-layout">
@@ -23,7 +22,7 @@
 				<label for="cost">
 					<em>费用：</em>
 					<input id="cost" type="text" placeholder="设置活动积分">
-					<a href="javascript:;" title="费用是XXXX">费用是什么？</a>
+					<a href="javascript:;" class="J_viewCost">费用是什么？</a>
 				</label>
 			</div>
 			<div class="from-group">
@@ -55,10 +54,29 @@
 		</div>
 	</div>
 
+	<div id="costModal" class="modal-container hide">
+		<div class="modal-shadow">
+			<div class="modal-content">
+				<div class="modal-head"></div>
+				<div class="modal-body">
+					<h5>费用是什么？</h5>
+					<p>它可以根据文档你的财富值标价</p>
+					<h5>如果用户没有屋币怎么办？</h5>
+					<p>将提醒。。。</p>
+				</div>
+				<div class="modal-footer">
+					<a href="javascript:;" class="modal-close">我知道了</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
 <script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
 <script>
 	require(['common'], function () {
-		require(['page/index']);
+		require(['page/pubActivity']);
 	});
 </script>
 </body>
