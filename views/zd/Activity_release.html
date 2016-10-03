@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>个人设置</title>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+		<script src="js/bootstrap.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+<body>
+	<nav class='navbar navbar-default nav_ps'>
+	</nav>
+	<script>
+		$(function(){
+			$(".navbar").load("nav.html")
+		})
+	</script>
+	<div class="content hdfbxqyemian">
+		<div class="row">
+			<div class="huodongfabu_fmt"><span>请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX）</span></div>
+			<div class="huodongfabu_bt"><input placeholder='请输入标题' type='text'></div>
+		</div>
+		<div class="row hdfbym_jbxx">
+				<div class="col-md-6">
+					<span>所在地区</span>
+					<select id="s1"> <option>国家 </option> </select> 
+					<select id="s2"> <option>省、地区</option> </select> 
+					<select id="s3"> <option>城市 </option> </select> 
+				</div>					
+				<div class="col-md-6">
+					<span>活动地点</span><input />
+				</div>
+		</div>
+		<div class="row hdfbym_jbxx">
+				<div class="col-md-6"><span>活动时间</span><input /><input /></div>
+				<div class="col-md-6"><span>费用</span><input /><img src="img/whatsthefy.png" style="width: 16px;height: 16px;"/><span style="width: 100px;" class="djcxfyjs"><a style="color: #CCCCCC;">费用是什么？</a></span></div>
+		</div>
+			<div class="row hdfbym_jbxx">
+				<div class="col-md-6"><span>主讲人</span><input /></div>
+				<div class="col-md-6"><span>联系方式</span><input /></div>
+				<div class="col-md-6" style="margin-top: 40px;"><span>主办方</span><input /></div>
+			</div>			
+		<div class="row">
+			<div>主讲人简介</div>
+			<div class="col-md-3" style="height:200px; line-height:200px;text-align: center;background: #CCCCCC;margin-top: 20px;border-radius: 5px;"><a>请添加主讲人头像</a></div>
+			<div class="col-md-9">
+				<div>简介</div>
+				<div><textarea class="zhujiangrenjianjie"></textarea></div>
+			</div>
+			<div class="col-md-9 col-lg-offset-3">
+				<div>演讲摘要</div>
+				<div><textarea class="zhujiangrenyjzy"></textarea></div>
+			</div>
+		</div>
+		<div class="row">
+			<div>活动摘要</div>
+			<div><textarea class="huodongzhaiyao"></textarea></div>
+		</div>
+		<div class="fabufanhuianniu"><button type="submit" class="fabuanniu">发布</button ><button class="fanhuianniu">返回列表</button></div>
+	</div>
+	<footer style="margin-top: 100px;">
+	<div class="beian">关于我们 | ©2010-2016 居屋网 | 京ICP备10044767号 | 京公网安备11010102000560号</div>		
+	</footer>
+	<div class="fyssm">
+		<div style="text-align: right;margin-top: 20px;margin-right: 20px;"><img src="img/zhuceguanbianniu.png" style="width: 16px;height: 16px;"class="gbwzdl"></div>
+		<div class="smsjftx">			
+			<div style="float: left;"><img src="img/wenjianjia.png" style="width: 60px;height: 60px;"/></div>
+			<div>
+				<span>费用是什么？</span><br />
+				<span style="color: #CCCCCC;">它可以根据您的文档下载财富值标价</span>
+			</div>
+		</div>
+		<div class="smsjftx">
+			<div style="float: left;"><img src="img/wenjianjia.png" style="width: 60px;height: 60px;" /></div>
+			<div>
+				<span>如果用户没有屋币？</span><br />
+				<span style="color: #CCCCCC;">将提醒用户在线下支付相应费用</span>
+			</div>
+		</div>
+		<div style="text-align: center;"><button class="wzdl">我知道了</button></div>
+	</div>
+	<script>
+		$(".djcxfyjs").click(function(){
+			$(".fyssm").show()
+		})
+		$(".wzdl").click(function(){
+			$(".fyssm").hide()
+		})
+		$(".gbwzdl").click(function(){
+			$(".fyssm").hide()
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<div class='container'>
+    <div class='navbar-header'>
+        <button aria-expanded='false' class='navbar-toggle collapsed' data-target='#bs-navbar-collapse'
+                data-toggle='collapse' type='button'>
+            <span class='sr-only'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+            <span class='icon-bar'></span>
+        </button>
+        <b><a href="index.html" class="navbar-brand"><span class="sy_logo_jzyqw">居者有其屋</span></a></b>
+    </div>
+    <div class='collapse navbar-collapse' id='bs-navbar-collapse'>
+        <ul class='nav navbar-nav navbar-right'>
+            <li>
+                <div class='search-wrapper'>
+                    <div class='form-group has-feedback'>
+                        <div style="margin-top: 12px;margin-left: 15px;">
+                            <input class='input_search' id='input-search' placeholder='搜索...' type='text'>
+                            <button>搜索</button>
+                            <button>极速匹配</button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a class="nav_denglu" id="navdenglu">登录</a></li>
+            <li><a class="nav_language" id="navzhuce">English</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(".nav_denglu").click(function () {
+        $(".denglu").css("display", "block")
+    })
+</script>

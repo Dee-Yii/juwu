@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5595510-ea0b-43be-8a0b-e1903e693bb9" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/base/base.min.css" afterPath="$PROJECT_DIR$/zhstatic/css/base/base.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/base/common.min.css" afterPath="$PROJECT_DIR$/zhstatic/css/base/common.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/css/index.min.css" afterPath="$PROJECT_DIR$/zhstatic/css/index.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/common.js" afterPath="$PROJECT_DIR$/zhstatic/js/common.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/lib/jquery.min.js" afterPath="$PROJECT_DIR$/zhstatic/js/lib/jquery.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/page/index.js" afterPath="$PROJECT_DIR$/zhstatic/js/page/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/js/require.js" afterPath="$PROJECT_DIR$/zhstatic/js/require.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/sass/base/_mixin.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/base/_mixin.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/sass/base/_variables.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/base/_variables.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/sass/base/base.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/base/base.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/sass/base/common.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/base/common.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/static/sass/index.scss" afterPath="$PROJECT_DIR$/zhstatic/sass/index.scss" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/zd/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-    </list>
+    <list default="true" id="f5595510-ea0b-43be-8a0b-e1903e693bb9" name="Default" comment="" />
     <ignored path="juwu.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
