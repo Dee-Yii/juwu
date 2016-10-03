@@ -36,6 +36,11 @@
             }
         }
         .speaker{
+            .title{
+                padding-top:10px;
+                line-height: 40px;
+                font-size: 20px;
+            }
             .avatar-img{
                 height: 230px;
                 width: 230px;
@@ -54,6 +59,16 @@
                 width: 690px;
                 height: 220px;
             }
+        }
+
+        .submit{
+            margin: 0 10px;
+            @include button($height:40px)
+        }
+        .back{
+            margin: 0 10px;
+            border: 1px solid $baseBorder;
+            @include button($height:40px,$color: #333,$backgroundColor:#fff);
         }
 
     }
