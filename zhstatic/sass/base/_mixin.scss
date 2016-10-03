@@ -13,28 +13,28 @@ $prefix-for-spec: true !default; // required for keyframe mixin
 	top: $top;
 }
 
-@mixin button($height: 24px, $block:block, $color: #ffffff, $backgroundColor: #FF5144, $padding: 0 20px) {
+@mixin button($height: 24px, $block:inline-block, $color: #ffffff, $backgroundColor: #ff560b, $padding: 0 20px) {
 	height: $height;
 	line-height: $height;
 	display: $block;
 	text-align: center;
 	color: $color;
-	border-radius: 4px;
+	//border-radius: 4px;
 	padding: $padding;
 	background: $backgroundColor;
 	transition: .2s;
-	@if $backgroundColor == #FF5144 {
-		&:hover{
-			background-color: #ee4133;
-		}
-	}
-
-	@if $backgroundColor == #ffffff {
-		&:hover{
-			background-color: #FF5144;
-			color: #fff;
-		}
-	}
+	//@if $backgroundColor == #FF5144 {
+	//	&:hover{
+	//		background-color: #ee4133;
+	//	}
+	//}
+    //
+	//@if $backgroundColor == #ffffff {
+	//	&:hover{
+	//		background-color: #FF5144;
+	//		color: #fff;
+	//	}
+	//}
 
 }
 
