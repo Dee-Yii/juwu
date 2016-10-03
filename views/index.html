@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../static/css/index.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="layout">
+            <a href="/" class="fl">
+                <img src="" alt="">
+            </a>
+            <a href="javascript:;" class="fr">En</a>
+            <a href="javascript:;" class="fr">登录</a>
+        </div>
+        <div class="banner">
+
+        </div>
+    </div>
+</body>
+<!--<script src="../static/js/lib/jquery.min.js"></script>-->
+<!--<script>-->
+    <!--$.ajax({-->
+        <!--type: "get",-->
+        <!--url: "http://www.homeownership.cn/editUser.action",-->
+        <!--data: {-->
+            <!--"password":"123456",-->
+            <!--"phone":"13390517165",-->
+            <!--id:"1"-->
+        <!--},-->
+        <!--dataType: "json",-->
+        <!--success: function(data){-->
+            <!--console.log(data)-->
+        <!--}-->
+    <!--});-->
+<!--</script>-->
+<script src="../static/js/require.js" data-main="../static/js/common"></script>
+<script>
+    require(['common'], function () {
+        require(['page/index']);
+    });
+</script>
+</html>
