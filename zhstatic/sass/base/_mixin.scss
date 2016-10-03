@@ -13,7 +13,7 @@ $prefix-for-spec: true !default; // required for keyframe mixin
 	top: $top;
 }
 
-@mixin button($height: 24px, $block:block, $color: #ffffff, $backgroundColor: #FF5144, $padding: 0 20px) {
+@mixin button($height: 24px, $block:inline-block, $color: #ffffff, $backgroundColor: #FF5144, $padding: 0 20px) {
 	height: $height;
 	line-height: $height;
 	display: $block;

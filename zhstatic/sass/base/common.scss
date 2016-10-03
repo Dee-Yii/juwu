@@ -2,6 +2,15 @@
 "_mixin",
 "_variables",
 "base";
+
+.ml10{
+    margin-left: 10px;
+}
+.mt30{
+    margin-top: 30px;
+}
+
+
 .main-container{
     padding-top: 80px;
 }
@@ -23,5 +32,9 @@ nav{
 input[type=text]{
     border: 1px solid $baseBorder;
     height: 26px;
+    width: 190px;
     padding: 0 5px;
+}
+textarea{
+    resize: none;
 }
