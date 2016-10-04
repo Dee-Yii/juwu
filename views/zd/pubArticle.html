@@ -29,7 +29,7 @@
         </label>
 
     </div>
-    <div id="editor" style="height:400px;max-height:500px;">
+    <div id="editor" style="height:400px;">
         <p>请输入内容...</p>
     </div>
 
@@ -40,10 +40,16 @@
 
 </div>
 
+<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
+<script>
+    require(['common'], function () {
+        require(['page/pubArticle']);
+    });
+</script>
 
-<script src="../../zhstatic/js/lib/jquery.min.js"></script>
-<script src="../../zhstatic/js/lib/wangEditor/js/wangEditor.js"></script>
-<script src="../../zhstatic/js/page/pubArticle.js"></script>
+<!--<script src="../../zhstatic/js/lib/jquery.min.js"></script>-->
+<!--<script src="../../zhstatic/js/lib/wangEditor/js/wangEditor.js"></script>-->
+<!--<script src="../../zhstatic/js/page/pubArticle.js"></script>-->
 
 </body>
 </html>
