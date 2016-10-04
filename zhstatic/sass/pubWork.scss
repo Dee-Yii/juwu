@@ -33,32 +33,91 @@
                 text-align: right;
             }
 
+
         }
     }
-    .speaker {
-        .title {
-            padding-top: 10px;
-            line-height: 40px;
-            font-size: 20px;
+    .from-group-v{
+        float: left;
+        width: 32%;
+        .title{
+            margin: 15px 0;
+            font-size: 30px;
         }
-        .avatar-img {
-            height: 230px;
-            width: 230px;
-            background-color: $inputGray;
-            text-align: center;
-            line-height: 230px;
-            cursor: pointer;
+        label{
+            display: block;
+            margin-bottom: 30px;
+            em{
+                display: inline-block;
+                width: 100px;
+            }
+            input,select{
+                width: 190px;
+            }
         }
-        .speaker-title {
-            line-height: 40px;
-            height: 40px;
+    }
+
+    .relative-activity{
+        border-top: 1px solid $baseBorder;
+        padding-top: 30px;
+        .title{
+            span{
+                font-size: 24px;
+            }
+            a{
+                margin-left: 20px;
+                border: 1px solid $baseBorder;
+                @include button($height:40px, $backgroundColor:#fff,$color:#222)
+            }
         }
-        textarea {
-            border: none;
-            background-color: $baseBorder;
-            padding: 5px;
-            width: 690px;
-            height: 220px;
+        ul{
+            padding-top: 20px;
+            li{
+                margin-bottom: 20px;
+                img{
+                    width: 200px;
+                    height: 150px;
+                }
+                .article{
+                    width: 910px;
+                    margin-left: 20px;
+                    h5{
+                        margin-bottom: 5px;
+                        font-size: 22px;
+                        line-height: 30px;
+                    }
+                    p{
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .work-img{
+        title{
+            font-size: 24px;
+        }
+        ul{
+            li{
+                float: left;
+                width: 140px;
+                height: 140px;
+                margin-left: 10px;
+                overflow: hidden;
+                &:last-child {
+                    margin: 0;
+                }
+                a{
+                    width: 138px;
+                    height: 138px;
+                    border: 1px dashed #999;
+                    color: #999;
+                    text-align: center;
+                    font-size: 50px;
+                    display: block;
+                    line-height: 138px;
+                }
+            }
         }
     }
 

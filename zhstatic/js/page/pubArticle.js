@@ -7,7 +7,7 @@ define([
 ],function($) {
     var page = {
         init: function () {
-            //this.onCheckLogin();
+            this.onCheckLogin();
             this.initEditor();
         },
         onCheckLogin: function () {
