@@ -1,10 +1,7 @@
 /**
  * Created by DAY on 16/10/3.
  */
-define([
-    "jquery",
-    //"swiper",
-],function($){
+
     var page = {
         init: function() {
             this.onCheckLogin()
@@ -26,4 +23,3 @@ define([
         }
     };
     page.init();
-});

@@ -14,10 +14,22 @@
         <input class="input-title" type="text" placeholder="请输入标题">
     </div>
     <div class="from-group">
-        <label for="area"><em>所在地：</em><input id="area" type="text"></label>
-        <label for="address"><em>活动地点：</em><input id="address" type="text"></label>
+        <label for=""><em>关联内容：</em></label>
+
     </div>
-    <div id="wangEditor">
+    <div class="from-group">
+        <label for="">
+            <em>类别：</em>
+            <select name="type" id="type">
+                <option value="1">专访</option>
+                <option value="2">hh</option>
+                <option value="3">hh</option>
+                <option value="4">ll</option>
+            </select>
+        </label>
+
+    </div>
+    <div id="editor" style="height:400px;max-height:500px;">
         <p>请输入内容...</p>
     </div>
 
@@ -29,11 +41,9 @@
 </div>
 
 
-<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
-<script>
-    require(['common'], function () {
-        require(['page/pubArticle']);
-    });
-</script>
+<script src="../../zhstatic/js/lib/jquery.min.js"></script>
+<script src="../../zhstatic/js/lib/wangEditor/js/wangEditor.js"></script>
+<script src="../../zhstatic/js/page/pubArticle.js"></script>
+
 </body>
 </html>
