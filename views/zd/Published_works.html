@@ -126,11 +126,11 @@
         </ul>
     </div>
 
-    <div class="work-img">
+    <div class="work-img ">
         <div class="title">作品图片</div>
-        <ul class="clearfix">
-            <li class="uploadBtnWrap">
-                <a id="upWorkImg" href="javascript:;">+</a>
+        <ul class="clearfix" id="work-attach-container">
+            <li id="work-attach-button-wrapper">
+                <a id="work-add-attach-button" href="javascript:;">+</a>
             </li>
         </ul>
     </div>
@@ -159,12 +159,16 @@
 	</div>
 </div>
 
+<script src="../../zhstatic/js/lib/jquery.min.js"></script>
+<script src="../../zhstatic/js/lib/plupload.min.js"></script>
 
-<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
-<script>
-	require(['common'], function () {
-		require(['page/pubActivity']);
-	});
-</script>
+<script src="../../zhstatic/js/page/pubWork.js"></script>
+
+<!--<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>-->
+<!--<script>-->
+	<!--require(['common'], function () {-->
+		<!--require(['page/pubActivity']);-->
+	<!--});-->
+<!--</script>-->
 </body>
 </html>

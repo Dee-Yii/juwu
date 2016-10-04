@@ -94,18 +94,40 @@
     }
 
     .work-img{
-        title{
+        .title{
             font-size: 24px;
+            margin-bottom: 10px;
         }
         ul{
+            .attach-box{
+            }
             li{
                 float: left;
                 width: 140px;
                 height: 140px;
-                margin-left: 10px;
+                margin-right: 10px;
                 overflow: hidden;
+                position: relative;
                 &:last-child {
                     margin: 0;
+                }
+                a.delt{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    display: none;
+                    height: 138px;
+                    background-color: rgba(0,0,0,.5);
+                    color: #fff;
+                    font-size: 50px;
+                    line-height: 138px;
+                    text-align: center;
+                }
+                img{
+                    display: block;
+                    width: 138px;
+                    height: 138px;
+                    padding: 0;
                 }
                 a{
                     width: 138px;
@@ -120,7 +142,6 @@
             }
         }
     }
-
     .submit {
         margin: 0 10px;
         @include button($height: 40px)
