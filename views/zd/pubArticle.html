@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>发布文章</title>
-		<script type="text/javascript" src="js/jquery-1.12.3.min.js" ></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-		<script src="js/bootstrap.js"></script>
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
+<head>
+    <meta charset="utf-8"/>
+    <title>发布文章</title>
+    <link rel="stylesheet" href="../../zhstatic/css/pubArtcle.min.css">
+</head>
 <body>
-	<nav class='navbar navbar-default nav_ps'>
-	</nav>
-	<script>
-		$(function(){
-			$(".navbar").load("nav.html")
-		})
-	</script>
-	<div class="content hdfbxqyemian">
-		<div class="row">
-			<div class="huodongfabu_fmt"><span>请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX）</span></div>
-			<div class="huodongfabu_bt"><input placeholder='请输入标题' type='text'></div>
-		</div>
-	</div>
-	<div class="content">
-		<div class="row wzfb_glnr">
-			<div><span class="wzfb_xbt">关联内容</span><button class="glzpbtn">关联作品</button><button class="glhdbtn">关联活动</button></div>
-			<div style="margin-top: 35px;"><span class="wzfb_xbt">类别</span>
-				<select>  
-				  <option value ="1">专访</option>  
-				  <option value ="2">非专访</option>  
-				</select> </div>
-		</div>
-		<div class="row">
-			<textarea class="wzfbnr">
-				
-			</textarea>
-			<div class="fabufanhuianniu"><button type="submit" class="fabuanniu">发布</button ><button class="fanhuianniu">返回列表</button></div>
-		</div>
-	</div>
-	<footer style="margin-top: 100px;">
-	<div class="beian">关于我们 | ©2010-2016 居屋网 | 京ICP备10044767号 | 京公网安备11010102000560号</div>		
-	</footer>
+<nav></nav>
+<div class="main-container layout">
+    <div id="coverImg" class="cover-img">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</div>
+
+    <div class="from-group">
+        <input class="input-title" type="text" placeholder="请输入标题">
+    </div>
+    <div class="from-group">
+        <label for="area"><em>所在地：</em><input id="area" type="text"></label>
+        <label for="address"><em>活动地点：</em><input id="address" type="text"></label>
+    </div>
+    <div id="wangEditor">
+        <p>请输入内容...</p>
+    </div>
+
+    <div class="tc mt30">
+        <a href="javascript:;" class="submit">发布</a>
+        <a href="javascript:;" class="back">返回列表</a>
+    </div>
+
+</div>
+
+
+<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
+<script>
+    require(['common'], function () {
+        require(['page/pubArticle']);
+    });
+</script>
 </body>
 </html>

@@ -3,6 +3,7 @@ requirejs.config({
     //urlArgs: "version=" + new Date().getTime(),
     paths: {
         jquery: 'lib/jquery.min',
+        wangEditor: 'lib/wangEditor/js/wangEditor'
         //pagination: 'vendor/jquery.page',
         //remodal: 'vendor/remodal',
         //tab: 'vendor/jquery.tab',
@@ -13,7 +14,10 @@ requirejs.config({
         //Validform: 'vendor/Validform',
     },
     shim: {
-
+        //'editor': {
+        //    deps: ['jquery'],
+        //    exports: 'wangEditor'
+        //},
     }
 });
 
