@@ -12,6 +12,7 @@ var workObj = {}; // 附件-应用图标
 var page = {
     init: function () {
         this.uploadImg();
+        this.initDatePicker();
     },
     onCheckLogin: function () {
         $.ajax({
@@ -29,7 +30,6 @@ var page = {
         });
     },
     uploadImg: function () {
-        console.log(1)
         attachUpload('work-attach-container', 'work-add-attach-button', 'work-attach-button-wrapper', 20, workObj);
 
         /**
@@ -222,6 +222,39 @@ var page = {
             attachUploader.init();
         }
     },
+    initDatePicker: function() {
+            $('#dateStart').datetimepicker({
+                lang: 'ch',
+                timepicker: false,
+                format: 'Y-m-d',
+                formatDate: 'Y-m-d',
+                scrollInput: false,
+                validateOnBlur: false,
+                onShow: function (ct) {
+                    this.setOptions({
+                        maxDate: $('#dateEnd').val() ? $('#dateEnd').val() : '+1970-01-01'
+                    })
+                },
+                // minDate:'-1970-01-01',
+
+                //yearStart: 2016,     //设置最小年份
+                //yearEnd: 2050,        //设置最大年份
+            });
+            $('#dateEnd').datetimepicker({
+                lang: 'ch',
+                timepicker: false,
+                format: 'Y-m-d',
+                formatDate: 'Y-m-d',
+                scrollInput: false,
+                validateOnBlur: false,
+                maxDate: '+1970-01-01',
+                onShow: function (ct) {
+                    this.setOptions({
+                        minDate: $('#dateStart').val() ? $('#dateStart').val() : '+1970-01-01'
+                    })
+                }
+            })
+    }
 };
 page.init();
 //})
