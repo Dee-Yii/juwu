@@ -7,7 +7,25 @@
 //],function($){
 var page = {
     init: function () {
-        this.onCheckLogin()
+        /*banner轮播*/
+        var mySwiper = new Swiper('.banner-container', {
+            autoplay: 2000, //可选选项，自动滑动
+            loop:true
+        });
+        /*banner轮播*/
+        /*设计师*/
+        var peopleSwiper = new Swiper(".people-container",{
+            autoplay:2000,
+            loop:true,
+            slidesPerView:7,
+            slidesPerGroup:1,
+            autoplayDisableOnInteraction:false,
+            spaceBetween:30,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next'
+        })
+        /*设计师*/
+        this.onCheckLogin();
     },
     onCheckLogin: function () {
         console.log(1);
