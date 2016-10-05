@@ -3,81 +3,67 @@
 <head>
 	<meta charset="utf-8" />
 	<title>作品详情</title>
-	<link rel="stylesheet" href="../../zhstatic/css/pubActivity.min.css">
+	<link rel="stylesheet" href="../../zhstatic/css/workDetail.min.css">
 </head>
 <body>
 <nav></nav>
-<div class="main-container layout">
-	<div id="coverImg" class="cover-img">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</div>
-	<div class="mini-layout">
-		<div class="from-group">
-			<input class="input-title" type="text" placeholder="请输入标题">
+<div class="main-container">
+	<div class="layout">
+		<h4>浙江杭州九树公寓建筑设计招标</h4>
+		<ul class="list clearfix">
+			<li>地点：</li>
+			<li>专业：</li>
+			<li>招标时间：</li>
+			<li>造价：</li>
+			<li>品类：</li>
+			<li>阶段：</li>
+			<li>任务周期：</li>
+			<li>预算：</li>
+			<li>建筑规模：</li>
+			<li>开发商：</li>
+			<li>联系电话：</li>
+			<li>联系邮箱：</li>
+			<li>相关文件：</li>
+		</ul>
+		<h5>任务描述</h5>
+		<div class="task-txt">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem nisi, distinctio odit eaque, quis tenetur ad animi architecto, recusandae accusantium mollitia vero nihil esse molestiae beatae delectus quos dignissimos quia.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque cum, iusto praesentium, repudiandae possimus voluptas. Ad numquam rem laudantium enim qui explicabo est doloremque aut iste. In nesciunt modi accusamus.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut numquam ratione animi fugit eum, eaque consectetur voluptatibus rerum dolorem, sapiente ullam, doloribus consequuntur minus libero similique sit labore? Quasi, assumenda!
 		</div>
-		<div class="from-group">
-			<label for="area"><em>所在地：</em><input id="area" type="text"></label>
-			<label for="address"><em>活动地点：</em><input id="address" type="text"></label>
+		<h5>任务要求</h5>
+		<div class="task-txt">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit natus voluptatem aperiam mollitia perspiciatis. Assumenda consequatur laborum totam vero praesentium accusantium, eaque earum rem iusto perferendis debitis animi libero, corrupti!
 		</div>
-		<div class="from-group">
-			<label for="date"><em>活动时间：</em><input id="date" type="text"></label>
-			<label for="cost">
-				<em>费用：</em>
-				<input id="cost" type="text" placeholder="设置活动积分">
-				<a href="javascript:;" class="J_viewCost">费用是什么？</a>
-			</label>
+		<div class="users clearfix">
+			<img src="" alt="">
+			<img src="" alt="">
 		</div>
-		<div class="from-group">
-			<label for="speaker"><em>主讲人：</em><input id="speaker" type="text"></label>
-			<label for="phone"><em>联系方式：</em><input id="phone" type="text"></label>
-			<label for="sponsor" class="mt30"><em>举办方：</em><input id="sponsor" type="text"></label>
-		</div>
-		<div class="speaker clearfix">
-			<div class="title">主讲人简介</div>
-			<div class="fl">
-				<div class="speaker-title"></div>
-				<div id="avatarImg" class="avatar-img">
-					请添加主讲人头像
-				</div>
-			</div>
-			<div class="fl ml10">
-				<div class="speaker-title">简介</div>
-				<textarea id="introduce" name=""></textarea>
-				<div class="speaker-title">演讲摘要</div>
-				<textarea id="info" name=""></textarea>
-			</div>
-		</div>
-
 		<div class="tc mt30">
+			<a href="javasript:;" class="enter">报名</a>
+		</div>
+		<div class="tc tips">Tips：任务招标任何疑问，欢迎致电XXX XXXXXX咨询</div>
+		<h5 class="comment">发表评论</h5>
+		<div class="login">登录为</div>
+		<div class="content clearfix">
+			<img src="" alt="">
+			<textarea></textarea>
+		</div>
+		<div class="pub clearfix">
 			<a href="javascript:;" class="submit">发布</a>
-			<a href="javascript:;" class="back">返回列表</a>
+
 		</div>
-
-	</div>
-</div>
-
-<div id="costModal" class="modal-container hide">
-	<div class="modal-shadow">
-		<div class="modal-content">
-			<div class="modal-head"></div>
-			<div class="modal-body">
-				<h5>费用是什么？</h5>
-				<p>它可以根据文档你的财富值标价</p>
-				<h5>如果用户没有屋币怎么办？</h5>
-				<p>将提醒。。。</p>
-			</div>
-			<div class="modal-footer">
-				<a href="javascript:;" class="modal-close">我知道了</a>
-			</div>
-
+		<div class="commentList">
+			<h3>3评论</h3>
 		</div>
 	</div>
 </div>
 
 
-<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
-<script>
-	require(['common'], function () {
-		require(['page/pubActivity']);
-	});
-</script>
+<script src="../../zhstatic/js/lib/jquery.min.js"></script>
+<script src="../../zhstatic/js/lib/plupload.min.js"></script>
+<script src="../../zhstatic/js/lib/datetimePicker.js"></script>
+
+<script src="../../zhstatic/js/page/workDetail.js"></script>
 </body>
 </html>
