@@ -10,12 +10,18 @@
 body{
 	background:#fff;
 }
+.fixed{
+	position:fixed !important;
+	left:50% !important;
+	transform:translate(-50%,0);
+	top:10px;
+}
 .banner-box{
 	margin-bottom:120px;
 	position:relative;
 	width:100%;
 	.nav-bar{
-		position:absolute;
+		position:fixed;
 		top:0;
 		left:0;
 		width:100%;
