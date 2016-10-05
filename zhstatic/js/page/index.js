@@ -23,10 +23,19 @@ var page = {
             spaceBetween:30,
             prevButton:'.swiper-button-prev',
             nextButton:'.swiper-button-next'
-        })
+        });
+        $(window).scroll(function (){
+            var scrollTop = $(window).scrollTop();
+            if(scrollTop >= 600){
+                $(".search-box").addClass("fixed");
+            }else{
+                $(".search-box").removeClass("fixed");
+            }
+        });
         /*设计师*/
         this.onCheckLogin();
     },
+
     onCheckLogin: function () {
         console.log(1);
         $.ajax({
