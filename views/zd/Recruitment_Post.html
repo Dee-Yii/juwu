@@ -1,86 +1,86 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>发布招聘</title>
-		<script type="text/javascript" src="js/jquery-1.12.3.min.js" ></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-		<script src="js/bootstrap.js"></script>
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
+<head>
+	<meta charset="utf-8" />
+	<title>发布招聘</title>
+	<link rel="stylesheet" href="../../zhstatic/css/pubRecruitment.min.css">
+</head>
 <body>
-	<nav class='navbar navbar-default nav_ps'>
-	</nav>
-	<script>
-		$(function(){
-			$(".navbar").load("nav.html")
-		})
-	</script>
-	<div class="content hdfbxqyemian">
-		<div class="row">
-			<div class="huodongfabu_fmt"><span>请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX）</span></div>
-			<div class="huodongfabu_bt"><input placeholder='请输入标题' type='text'></div>
-		</div>
-		<div class="row">
-			<div class="col-md-4">
-				<ul class="fbzp_ulli">
-					<li>
-						<span>工作性质</span>
-						<select name="">
-							<option value="">全职</option>
-							<option value="">兼职</option>
-						</select>
-					</li>
-					<li>
-						<span>工作年限</span>
-						<select name="">
-							<option value="">1-3年</option>
-							<option value="">3-5年</option>
-							<option value="">5年以上</option>
-						</select>
-					</li>
-					<li>
-						<span>招聘人数</span><input  />
-					</li>
-					<li>
-						<span>工作地点</span><input />
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-4">
-				<ul class="fbzp_ulli">
-					<li><span>专业要求</span><input/></li>
-					<li><span>学历要求</span><input/></li>
-					<li><span>工资待遇</span><input/></li>
-					<li><span>招聘日期</span></li>
-				</ul>
-			</div>
-			<div class="col-md-4">
-				<ul class="fbzp_ulli">
-					<li><span>职称要求</span><input/></li>
-					<li><span>外语要求</span><input/></li>
-					<li><span>联系方式</span><input/></li>
-					<li><span>招聘单位</span><input/></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div style="margin-top: 40px;margin-bottom: 20px;">职位描述</div>
-			<div><textarea class="renwufabunrk"></textarea></div>
-		</div>
-		<div class="row">
-			<div style="margin-top: 40px;margin-bottom: 20px;">岗位要求</div>
-			<div><textarea class="renwufabunrk"></textarea></div>
-		</div>
-		<div class="row">
-			<div style="margin-top: 40px;margin-bottom: 20px;">公司介绍</div>
-			<div><textarea class="renwufabunrk"></textarea></div>
-		</div>
-		<div class="fabufanhuianniu"><button type="submit" class="fabuanniu">发布</button ><button class="fanhuianniu">返回列表</button></div>
+<nav></nav>
+<div class="main-container layout">
+	<div class="from-group">
+		<input class="input-title" type="text" placeholder="请输入标题">
 	</div>
-	<footer style="margin-top: 100px;">
-	<div class="beian">关于我们 | ©2010-2016 居屋网 | 京ICP备10044767号 | 京公网安备11010102000560号</div>		
-	</footer>
+	<div class="clearfix">
+		<div class="from-group-v">
+			<label>
+				<em>工作性质：</em>
+				<select name="country" id="">
+					<option value="">全职</option>
+					<option value="">兼职</option>
+				</select>
+			</label>
+			<label>
+				<em>工作经验：</em>
+				<select name="country" id="">
+					<option value="">3-5年</option>
+				</select>
+			</label>
+			<label>
+				<em>招聘人数：</em>
+				<input type="text">
+			</label>
+			<label>
+				<em>工作地点：</em>
+				<input type="text">
+			</label>
+		</div>
+		<div class="from-group-v">
+			<label><em>专业要求：</em><input type="text"></label>
+			<label><em>工资待遇：</em><input type="text"></label>
+			<label><em>学历要求：</em><input type="text"></label>
+			<label><em>招聘日期：</em><input type="text" id="dateStart">--<input type="text" id="dateEnd"></label>
+
+		</div>
+		<div class="from-group-v">
+			<label><em>职称要求：</em><input type="text"></label>
+			<label><em>外语要求：</em><input type="text"></label>
+			<label><em>联系方式：</em><input type="text"></label>
+			<label><em>招聘单位：</em><input type="text"></label>
+		</div>
+	</div>
+    <div class="from-group">
+        <h5 class="title">职位描述</h5>
+        <textarea class="intro"></textarea>
+        <h5 class="title">岗位要求</h5>
+        <textarea class="need"></textarea>
+        <h5 class="title">公司介绍</h5>
+        <textarea class="info"></textarea>
+    </div>
+
+
+
+	<div class="tc mt30">
+		<a href="javascript:;" class="submit">发布</a>
+		<a href="javascript:;" class="back">返回列表</a>
+	</div>
+</div>
+
+
+<script src="../../zhstatic/js/lib/jquery.min.js"></script>
+<script src="../../zhstatic/js/lib/plupload.min.js"></script>
+<script src="../../zhstatic/js/lib/datetimePicker.js"></script>
+
+
+<script src="../../zhstatic/js/common.js"></script>
+<script src="../../zhstatic/js/page/pubRecruitment.js"></script>
+
+
+<!--<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>-->
+<!--<script>-->
+<!--require(['common'], function () {-->
+<!--require(['page/pubActivity']);-->
+<!--});-->
+<!--</script>-->
 </body>
 </html>
