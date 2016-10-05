@@ -1,26 +1,42 @@
-requirejs.config({
-    //baseUrl: './',
-    //urlArgs: "version=" + new Date().getTime(),
-    paths: {
-        jquery: 'lib/jquery.min',
-        wangEditor: 'lib/wangEditor/js/wangEditor'
-        //pagination: 'vendor/jquery.page',
-        //remodal: 'vendor/remodal',
-        //tab: 'vendor/jquery.tab',
-        //echarts: 'vendor/echarts.min',
-        //datepicker: 'vendor/jquery.datetimepicker',
-        //carousel: 'vendor/jquery.carousel',
-        //footer: 'vendor/locateFooter',
-        //Validform: 'vendor/Validform',
+/**
+ * Created by DAY on 16/10/5.
+ */
+var common = {
+    init: function(){
+        this.initDatePicker();
     },
-    shim: {
-        //'editor': {
-        //    deps: ['jquery'],
-        //    exports: 'wangEditor'
-        //},
+    initDatePicker: function() {
+        $('#dateStart').datetimepicker({
+            lang: 'ch',
+            timepicker: false,
+            format: 'Y-m-d',
+            formatDate: 'Y-m-d',
+            scrollInput: false,
+            validateOnBlur: false,
+            onShow: function (ct) {
+                this.setOptions({
+                    maxDate: $('#dateEnd').val() ? $('#dateEnd').val() : '+1970-01-01'
+                })
+            },
+            // minDate:'-1970-01-01',
+
+            //yearStart: 2016,     //设置最小年份
+            //yearEnd: 2050,        //设置最大年份
+        });
+        $('#dateEnd').datetimepicker({
+            lang: 'ch',
+            timepicker: false,
+            format: 'Y-m-d',
+            formatDate: 'Y-m-d',
+            scrollInput: false,
+            validateOnBlur: false,
+            maxDate: '+1970-01-01',
+            onShow: function (ct) {
+                this.setOptions({
+                    minDate: $('#dateStart').val() ? $('#dateStart').val() : '+1970-01-01'
+                })
+            }
+        })
     }
-});
-
-define(["jquery"], function () {
-
-});
+};
+common.init();
