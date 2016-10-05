@@ -13,6 +13,9 @@
 .mt30{
     margin-top: 30px;
 }
+.mt50{
+    margin-top: 50px;
+}
 .hide{
     display: none;
 }
@@ -41,6 +44,10 @@ input[type=text]{
     height: 26px;
     width: 190px;
     padding: 0 5px;
+}
+select{
+    border: 1px solid $baseBorder;
+    height:30px;
 }
 textarea{
     resize: none;

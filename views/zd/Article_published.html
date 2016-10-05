@@ -8,7 +8,9 @@
 <body>
 <nav></nav>
 <div class="main-container layout">
-    <div id="coverImg" class="cover-img">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</div>
+    <div id="coverImg" class="cover-img">
+        <a href="javascript:;">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</a>
+    </div>
 
     <div class="from-group">
         <input class="input-title" type="text" placeholder="请输入标题">
@@ -40,15 +42,15 @@
 
 </div>
 
-<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
-<script>
-    require(['common'], function () {
-        require(['page/pubArticle']);
-    });
-</script>
+<script src="../../zhstatic/js/lib/jquery.min.js"></script>
+<script src="../../zhstatic/js/lib/plupload.min.js"></script>
+<script src="../../zhstatic/js/lib/wangEditor/js/wangEditor.js"></script>
+<script src="../../zhstatic/js/module/uploadCover.js"></script>
+
+<script src="../../zhstatic/js/page/pubArticle.js"></script>
+
 
 <!--<script src="../../zhstatic/js/lib/jquery.min.js"></script>-->
-<!--<script src="../../zhstatic/js/lib/wangEditor/js/wangEditor.js"></script>-->
 <!--<script src="../../zhstatic/js/page/pubArticle.js"></script>-->
 
 </body>
