@@ -25,6 +25,11 @@
                 }
             });
         },
+        onSubmit: function(){
+            $(".submit").on("click",function(){
+
+            })
+        }
 
     };
     page.init();
