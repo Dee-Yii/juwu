@@ -1,0 +1,52 @@
+@import
+"base/_mixin",
+"base/_variables",
+"base/base",
+"base/common";
+
+.main-container{
+    .cover-img{
+        margin: 40px 0 0;
+        height: 240px;
+        background-color: $inputGray;
+        text-align: center;
+        line-height:240px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    .layout{
+        h4{
+            margin-bottom:40px;
+            border-bottom: 1px solid $baseBorder;
+            line-height: 70px;
+            font-size:30px;
+        }
+        .other-title{
+            font-size: 20px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid $baseBorder;
+        }
+        .other{
+            li{
+                border-bottom: 1px solid $baseBorder;
+                a{
+                    display: inline-block;
+                    color: #666;
+                    line-height: 50px;
+                    &:hover{
+                        color: #333;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
