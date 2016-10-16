@@ -4,7 +4,8 @@
 
     var page = {
         init: function() {
-            this.onCheckLogin()
+            this.onCheckLogin();
+            this.correctPwd();
         },
         onCheckLogin: function () {
             $.ajax({
@@ -18,6 +19,18 @@
                 dataType: "json",
                 success: function(data){
                     console.log(data)
+                }
+            });
+        },
+        correctPwd:function (){
+            /*修改密码*/
+            $(".heade>a").on("click",function (){
+                if($(this).hasClass("login-out-btn")){
+                    return false;
+                }else{
+                    var index = $(this).index();
+                    $(this).addClass("bg").siblings("a").removeClass("bg");
+                    $(".tabs").eq(index).show().siblings(".tabs").hide();
                 }
             });
         }

@@ -3,14 +3,17 @@
 "base/_variables",
 "base/base",
 "base/common";
-
-
-
+.main-container{
+	margin-bottom:100px;
+}
 .table{
-	width:542px;
+	width:596px;
 	margin:0 auto;
 	.heade{
+		margin-bottom:23px;
+		border-bottom:1px solid #eee;
 		height:117px;
+		line-height:117px;
 		a{
 			float:left;
 			font-size:20px;
@@ -38,12 +41,18 @@
 			text-align: right;
 		}
 		input{
-			width:370px;
+			border-radius:4px;
+			width:468px;
 			margin-left: 10px;
 		}
 		select{
 			margin-left: 10px;
 			width: 200px;
+		}
+		p{
+			padding:13px 0 0 115px;
+			font-size:14px;
+			color:#a7a8aa;
 		}
 		#avatr-attach-container{
 			display: inline-block;
@@ -68,10 +77,47 @@
 			border-radius:4px;
 		}
 	}
-
 }
-
 .submit{
+	border-radius:4px;
 	width: 120px;
 	@include button($height:30px)
+}
+.correct-password{
+	display:none;
+	margin:0 auto;
+	width:468px;
+	h3{
+		text-align:center;
+		line-height:132px;
+		font-size:20px;
+		color:#303030;
+	}
+	ul{
+		li{
+			margin-bottom:24px;
+			label{
+				margin-right:31px;
+				display:inline-block;
+				width:92px;
+				line-height:35px;
+				text-align:right;
+			}
+			input[type='password']{
+				border-radius:4px;
+				border:1px solid #eee;
+				padding-left:16px;
+				width:264px;
+				height:35px;
+				line-height:35px;
+			}
+			.submit-btn{
+				margin-top:12px;
+				margin-left:16px;
+				border-radius:4px;
+				width:84px;
+				@include button($height:30px,$padding:0)
+			}
+		}
+	}
 }
