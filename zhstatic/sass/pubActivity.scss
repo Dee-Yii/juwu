@@ -2,6 +2,7 @@
 "base/_mixin",
 "base/_variables",
 "base/base",
+"lib/datetimePicker",
 "base/common";
 
 .main-container{
@@ -73,5 +74,44 @@
             @include button($height:40px,$color: #333,$backgroundColor:#fff);
         }
 
+    }
+}
+#avatar-attach-container{
+    li{
+        float: left;
+        position: relative;
+        margin-right:10px;
+        height: 230px;
+        width: 230px;
+        overflow: hidden;
+        &:nth-child(2){
+            display: none;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        a.delt{
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: none;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            font-size: 50px;
+            line-height: 230px;
+            text-align: center;
+        }
+        a{
+            display: block;
+            height: 230px;
+            width: 230px;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+        }
     }
 }

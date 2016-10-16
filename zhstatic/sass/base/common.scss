@@ -63,6 +63,7 @@ textarea{
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 999;
     .modal-table{
         width: 100%;
         height: 100%;
@@ -93,6 +94,45 @@ textarea{
                     }
                 }
             }
+        }
+    }
+}
+
+#cover-attach-container{
+    li{
+        float: left;
+        position: relative;
+        margin-right:10px;
+        height: 240px;
+        width: 100%;
+        overflow: hidden;
+        &:nth-child(2){
+            display: none;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+        a.delt{
+            position: absolute;
+            left: 0;
+            right: 0;
+            display: none;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            font-size: 50px;
+            line-height: 240px;
+            text-align: center;
+        }
+        a{
+            display: block;
+            height: 240px;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
         }
     }
 }
