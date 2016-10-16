@@ -132,7 +132,7 @@ function upLogo(attachBox, addBtn, addBtnWrapper, limit, obj) {
         runtimes: "html5,flash,silverlight,html4",
         browse_button: addBtn,
         container: document.getElementById(addBtnWrapper),
-        url: "http://oss-cn-shanghai.aliyuncs.com",
+        url: "http://homeownership.oss-cn-hangzhou.aliyuncs.com",
         flash_swf_url: "/js/vendor/Moxie.swf",
         silverlight_xap_url: "/js/vendor/Moxie.xap",
         filters: {
@@ -191,7 +191,7 @@ function upLogo(attachBox, addBtn, addBtnWrapper, limit, obj) {
                             id: response.id,
                             url: response.url
                         };
-                        console.log(obj[file.id]);
+                        console.log(response);
 
                     }
                 });

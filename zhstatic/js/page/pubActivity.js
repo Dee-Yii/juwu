@@ -13,21 +13,7 @@
             this.onViewCost();
             this.onSubmit();
         },
-        onCheckLogin: function () {
-            $.ajax({
-                type: "get",
-                url: "http://www.homeownership.cn/editUser.action",
-                data: {
-                    "password":"123456",
-                    "phone":"13390517165",
-                    id:"1"
-                },
-                dataType: "json",
-                success: function(data){
-                    console.log(data)
-                }
-            });
-        },
+
         uploadImg: function () {
             attachUpload('avatar-attach-container', 'avatar-add-attach-button', 'avatar-attach-button-wrapper', 1, avatarObj);
         },
@@ -35,9 +21,9 @@
             $(".J_viewCost").on("click", function() {
                 $("#costModal").fadeIn();
             });
-            $(".modal-close").on("click", function(){
-                $("#costModal").fadeOut();
-            })
+            //$(".modal-close").on("click", function(){
+            //    $("#costModal").fadeOut();
+            //})
         },
         onSubmit: function(){
             $(".submit").on("click", function () {

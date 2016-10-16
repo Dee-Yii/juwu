@@ -3,7 +3,7 @@ var coverObj = {}; // 附件-应用图标
 /**
  * Created by DAY on 16/10/4.
  */
-attachUpload('cover-attach-container', 'cover-add-attach-button', 'cover-attach-button-wrapper', 20, coverObj);
+attachUpload('cover-attach-container', 'cover-add-attach-button', 'cover-attach-button-wrapper', 1, coverObj);
 
 /**
  * 附件上传方法 -到阿里云
@@ -60,9 +60,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
         $.ajax({
             type: "get",
             async: false,
-            //url: "http://122.224.199.228:8060/service/osssignature",
-            //url: "http://122.224.199.228:8080/service/osssignature",
-            url: "http://112.124.3.182:8080/service/osssignature",
+            url: "http://www.homeownership.cn/upload.oss",
             dataType: "jsonp",
             contentType: "application/json",
             jsonp: "callback",
@@ -76,6 +74,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 expire = parseInt(obj['expire']);
                 callbackbody = obj['callback'];
                 callbackFun();
+                console.log(data)
             },
             error: function () {
                 alert('获取签名信息失败');
@@ -86,9 +85,8 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
     function set_upload_param(up, callbackFun) {
         //可以判断当前expire是否超过了当前时间,如果超过了当前时间,就重新取一下.3s 做为缓冲
         var now = Date.parse(new Date()) / 1000;
-        var expireFlag = expire < now + .3;
+        var expireFlag = expire < now + 3;
         if (expireFlag) {
-
             get_signature(function () {
                 set_upload_param(up, callbackFun);
             });
@@ -116,7 +114,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
         runtimes: "html5,flash,silverlight,html4",
         browse_button: addBtn,
         container: document.getElementById(addBtnWrapper),
-        url: "http://oss-cn-shanghai.aliyuncs.com",
+        url: "http://homeownership.oss-cn-hangzhou.aliyuncs.com",
         flash_swf_url: "/js/vendor/Moxie.swf",
         silverlight_xap_url: "/js/vendor/Moxie.xap",
         filters: {
@@ -173,6 +171,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                         var response = JSON.parse(info.response);
                         obj[file.id] = response.id;
                         console.log(obj);
+                        console.log(response);
                     }
                 });
 

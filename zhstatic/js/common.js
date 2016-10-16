@@ -3,8 +3,10 @@
  */
 var common = {
     init: function(){
-        this.initDatePicker();
-        this.initUser();
+        //this.initUser();
+        this.onLogin();
+        //this.initDatePicker();
+        //this.initModal();
     },
     initUser: function () {
         $.ajax({
@@ -19,6 +21,28 @@ var common = {
             success: function(data){
                 console.log(data)
             }
+        });
+    },
+    onLogin: function () {
+        $(".J_login").on("click", function(){
+            $("#loginModal").fadeIn();
+        });
+        $(".J_submitLogin").on("click", function(){
+            $.ajax({
+                type: "get",
+                url: "http://www.homeownership.cn/editUser.action",
+                dataType: "json",
+                data: {
+                    "password": "123456",
+                    "phone": "13390517165"
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (res) {
+                    console.log(res)
+                }
+            });
         });
     },
     initDatePicker: function() {
@@ -87,6 +111,11 @@ var common = {
                 })
             }
         });
-    }
+    },
+    initModal: function () {
+        $(".modal-close").on("click", function(){
+            $("#costModal").fadeOut();
+        })
+    },
 };
 common.init();

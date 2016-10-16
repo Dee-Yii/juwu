@@ -1,29 +1,18 @@
 /**
  * Created by DAY on 16/10/2.
  */
-//define([
-//    "jquery",
-//    //"swiper",
-//],function($){
 var page = {
     init: function () {
-        /*banner轮播*/
-        var mySwiper = new Swiper('.banner-container', {
-            autoplay: 2000, //可选选项，自动滑动
-            loop:true
-        });
-        /*banner轮播*/
-        /*设计师*/
-        var peopleSwiper = new Swiper(".people-container",{
-            autoplay:2000,
-            loop:true,
-            slidesPerView:7,
-            slidesPerGroup:1,
-            autoplayDisableOnInteraction:false,
-            spaceBetween:30,
-            prevButton:'.swiper-button-prev',
-            nextButton:'.swiper-button-next'
-        });
+        this.fixedBar();
+        this.initSwiper();
+        this.initNavChange();
+        common.initModal()
+    },
+
+    /**
+     * nav滚动控制
+     */
+    initNavChange: function () {
         $(window).scroll(function (){
             $(".nav-bar").addClass("bgColor");
             $(".logo").addClass("fntColor");
@@ -38,52 +27,31 @@ var page = {
                 $(".logo").removeClass("fntColor");
             }
         });
+    },
+    /**
+     * 轮播控制
+     */
+    initSwiper: function () {
+        /*banner轮播*/
+        var mySwiper = new Swiper('.banner-container', {
+            autoplay: 2000, //可选选项，自动滑动
+            loop:true
+        });
         /*设计师*/
-        this.onCheckLogin();
-        /*左侧悬浮框*/
-        this.fixedBar();
-    },
-    onLogin: function () {
-        $(".J_login").on("click", function(){
-            $.ajax({
-                type: "get",
-                url: "http://www.homeownership.cn/editUser.action",
-                dataType: "json",
-                data: {
-                    "password": "123456",
-                    "phone": "13390517165"
-                },
-                success: function (data) {
-                    console.log(data)
-                },
-                error: function (res) {
-                    console.log(res)
-                }
-            });
+        var peopleSwiper = new Swiper(".people-container",{
+            autoplay:2000,
+            loop:true,
+            slidesPerView:7,
+            slidesPerGroup:1,
+            autoplayDisableOnInteraction:false,
+            spaceBetween:30,
+            prevButton:'.swiper-button-prev',
+            nextButton:'.swiper-button-next'
         });
     },
-    onCheckLogin: function () {
-        $.ajax({
-            type: "get",
-            url: "http://www.homeownership.cn/editUser.action",
-            dataType: "json",
-            data: {
-                "password": "123456",
-                "phone": "13390517165"
-            },
-            success: function (data) {
-                console.log(data)
-            },
-            error: function (res) {
-                console.log(res)
-            }
-        });
-        $(".logined").hover(function (){
-            $(".person-center").show();
-        },function (){
-            $(".person-center").hide();
-        })
-    },
+    /**
+     * 悬浮导航
+     */
     fixedBar:function (){
         /*回到顶部*/
         $(".to-top").on("click",function (){
@@ -98,7 +66,6 @@ var page = {
             $(document.documentElement).animate({scrollTop:top},400);//for Firefox&IE
             $("body").animate({scrollTop:top},400);//for Chrome
         }
-    }
+    },
 };
 page.init();
-//});
