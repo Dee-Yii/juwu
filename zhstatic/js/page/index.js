@@ -25,17 +25,24 @@ var page = {
             nextButton:'.swiper-button-next'
         });
         $(window).scroll(function (){
+            $(".nav-bar").addClass("bgColor");
+            $(".logo").addClass("fntColor");
             var scrollTop = $(window).scrollTop();
             if(scrollTop >= 600){
                 $(".search-box").addClass("fixed");
             }else{
                 $(".search-box").removeClass("fixed");
             }
+            if(scrollTop == 0){
+                $(".nav-bar").removeClass("bgColor");
+                $(".logo").removeClass("fntColor");
+            }
         });
         /*设计师*/
         this.onCheckLogin();
+        /*左侧悬浮框*/
+        this.fixedBar();
     },
-
     onCheckLogin: function () {
         console.log(1);
         $.ajax({
@@ -53,6 +60,15 @@ var page = {
                 console.log(res)
             }
         });
+    },
+    fixedBar:function (){
+        $(".to-top").on("click",function (){
+            goTop(0);
+        });
+        function goTop(top) {
+            $(document.documentElement).animate({scrollTop:top},400);//for Firefox&IE
+            $("body").animate({scrollTop:top},400);//for Chrome
+        }
     }
 };
 page.init();
