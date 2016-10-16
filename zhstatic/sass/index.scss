@@ -3,11 +3,6 @@
 "base/_variables",
 "base/base",
 "base/common";
-.clearfix{
-	display:table;
-	clear:both;
-	content:"";
-}
 body{
 	background:#fff;
 }
@@ -64,6 +59,11 @@ body{
 						border-radius:50%;
 						width:100%;
 						height:100%;
+					}
+					&:hover{
+						.person-center{
+							display:block;
+						}
 					}
 					.person-center{
 						display:none;
@@ -144,7 +144,7 @@ body{
 		bottom:45px;
 		transform:translate(-50%,0);
 		z-index:1000;
-		width:769px;
+		width:774px;
 		@extend .clearfix;
 		input{
 			float:left;

@@ -1,11 +1,11 @@
 /**
  * Created by DAY on 16/10/3.
  */
-
     var page = {
         init: function() {
             this.onCheckLogin();
             this.correctPwd();
+            this.personalInfo();
         },
         onCheckLogin: function () {
             $.ajax({
@@ -33,6 +33,12 @@
                     $(".tabs").eq(index).show().siblings(".tabs").hide();
                 }
             });
+        },
+        personalInfo:function (){
+            var realName = $("#realName").val();//真实姓名
+            var email = $("#email").val();//邮箱
+            var telNumber = $("#telNumber").val();//手机号
+            var country = $("#country").val();//国籍
         }
     };
     page.init();
