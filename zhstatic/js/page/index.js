@@ -43,6 +43,25 @@ var page = {
         /*左侧悬浮框*/
         this.fixedBar();
     },
+    onLogin: function () {
+        $(".J_login").on("click", function(){
+            $.ajax({
+                type: "get",
+                url: "http://www.homeownership.cn/editUser.action",
+                dataType: "json",
+                data: {
+                    "password": "123456",
+                    "phone": "13390517165"
+                },
+                success: function (data) {
+                    console.log(data)
+                },
+                error: function (res) {
+                    console.log(res)
+                }
+            });
+        });
+    },
     onCheckLogin: function () {
         $.ajax({
             type: "get",

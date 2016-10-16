@@ -4,6 +4,22 @@
 var common = {
     init: function(){
         this.initDatePicker();
+        this.initUser();
+    },
+    initUser: function () {
+        $.ajax({
+            type: "post",
+            url: "http://www.homeownership.cn/userInfo.action",
+            data: {
+                "userid":"123456",
+                //"phone":"13390517165",
+                //id:"1"
+            },
+            dataType: "jsonp",
+            success: function(data){
+                console.log(data)
+            }
+        });
     },
     initDatePicker: function() {
         $('#dateStart').datetimepicker({
