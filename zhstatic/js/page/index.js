@@ -44,7 +44,6 @@ var page = {
         this.fixedBar();
     },
     onCheckLogin: function () {
-        console.log(1);
         $.ajax({
             type: "get",
             url: "http://www.homeownership.cn/editUser.action",
@@ -60,11 +59,22 @@ var page = {
                 console.log(res)
             }
         });
+        $(".logined").hover(function (){
+            $(".person-center").show();
+        },function (){
+            $(".person-center").hide();
+        })
     },
     fixedBar:function (){
+        /*回到顶部*/
         $(".to-top").on("click",function (){
             goTop(0);
         });
+        /*绿建和装配*/
+        $(".build-green").on("click",function (){
+            var top = $(".assemble-box").offset().top-71;
+            goTop(top);
+        });  
         function goTop(top) {
             $(document.documentElement).animate({scrollTop:top},400);//for Firefox&IE
             $("body").animate({scrollTop:top},400);//for Chrome
