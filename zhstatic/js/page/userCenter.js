@@ -20,6 +20,12 @@
                     console.log(data)
                 }
             });
+            /*左侧悬浮框*/
+            $(".logined").hover(function (){
+                $(".person-center").show();
+            },function (){
+                $(".person-center").hide();
+            })
         }
     };
     page.init();
