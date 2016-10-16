@@ -83,9 +83,12 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
     }
 
     function set_upload_param(up, callbackFun) {
-        //可以判断当前expire是否超过了当前时间,如果超过了当前时间,就重新取一下.3s 做为缓冲
+        //可以判断当前expire是否超过了当前时间,如果超过了当前时间,就重新取一下   .3s 做为缓冲
         var now = Date.parse(new Date()) / 1000;
-        var expireFlag = expire < now + 3;
+        var expireFlag = expire < now + .3;
+        console.log(expire);
+        console.log(now);
+        console.log(expireFlag);
         if (expireFlag) {
             get_signature(function () {
                 set_upload_param(up, callbackFun);
