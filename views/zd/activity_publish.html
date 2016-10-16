@@ -8,17 +8,28 @@
 <body>
 	<nav></nav>
 	<div class="main-container layout">
-		<div id="coverImg" class="cover-img">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</div>
+		<div id="coverImg" class="cover-img">
+			<ul class="clearfix" id="cover-attach-container">
+				<li id="cover-attach-button-wrapper">
+					<a id="cover-add-attach-button" href="javascript:;">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</a>
+				</li>
+			</ul>
+		</div>
 		<div class="mini-layout">
 			<div class="from-group">
-				<input class="input-title" type="text" placeholder="请输入标题">
+				<input id="title" class="input-title" type="text" placeholder="请输入标题">
 			</div>
 			<div class="from-group">
 				<label for="area"><em>所在地：</em><input id="area" type="text"></label>
 				<label for="address"><em>活动地点：</em><input id="address" type="text"></label>
 			</div>
 			<div class="from-group">
-				<label for="date"><em>活动时间：</em><input id="date" type="text"></label>
+				<label>
+                    <em>活动时间：</em>
+                    <input type="text" id="timeStart" readonly>
+                    --
+                    <input type="text" id="timeEnd" readonly>
+                </label>
 				<label for="cost">
 					<em>费用：</em>
 					<input id="cost" type="text" placeholder="设置活动积分">
@@ -35,7 +46,11 @@
 				<div class="fl">
 					<div class="speaker-title"></div>
 					<div id="avatarImg" class="avatar-img">
-						请添加主讲人头像
+						<ul class="clearfix" id="avatar-attach-container">
+							<li id="avatar-attach-button-wrapper">
+								<a id="avatar-add-attach-button" href="javascript:;">请添加主讲人头像</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="fl ml10">
@@ -55,29 +70,31 @@
 	</div>
 
 	<div id="costModal" class="modal-container hide">
-		<div class="modal-shadow">
-			<div class="modal-content">
-				<div class="modal-head"></div>
-				<div class="modal-body">
-					<h5>费用是什么？</h5>
-					<p>它可以根据文档你的财富值标价</p>
-					<h5>如果用户没有屋币怎么办？</h5>
-					<p>将提醒。。。</p>
+		<div class="modal-table">
+			<div class="modal-cell">
+				<div class="modal-content">
+					<div class="modal-head"></div>
+					<div class="modal-body">
+						<h5>费用是什么？</h5>
+						<p>它可以根据文档你的财富值标价</p>
+						<h5>如果用户没有屋币怎么办？</h5>
+						<p>将提醒。。。</p>
+					</div>
+					<div class="modal-footer">
+						<a href="javascript:;" class="modal-close">我知道了</a>
+					</div>
 				</div>
-				<div class="modal-footer">
-					<a href="javascript:;" class="modal-close">我知道了</a>
-				</div>
-
 			</div>
 		</div>
 	</div>
 
+	<script src="../../zhstatic/js/lib/jquery.min.js"></script>
+	<script src="../../zhstatic/js/lib/plupload.min.js"></script>
+	<script src="../../zhstatic/js/lib/datetimePicker.js"></script>
+	<script src="../../zhstatic/js/module/uploadCover.js"></script>
+	<script src="../../zhstatic/js/module/upload.js"></script>
+	<script src="../../zhstatic/js/common.js"></script>
 
-<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>
-<script>
-	require(['common'], function () {
-		require(['page/pubActivity']);
-	});
-</script>
+	<script src="../../zhstatic/js/page/pubActivity.js"></script>
 </body>
 </html>

@@ -8,7 +8,13 @@
 <body>
 <nav></nav>
 <div class="main-container layout">
-	<div id="coverImg" class="cover-img">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</div>
+	<div id="coverImg" class="cover-img">
+        <ul class="clearfix" id="cover-attach-container">
+            <li id="cover-attach-button-wrapper">
+                <a id="cover-add-attach-button" href="javascript:;">请添加封面图（支持5M以内的JPG、GIF、PNG图片、建议尺寸1000*562PX</a>
+            </li>
+        </ul>
+    </div>
 	<div class="from-group">
 		<input class="input-title" type="text" placeholder="请输入标题">
 	</div>
@@ -65,49 +71,46 @@
 		</div>
         <div class="from-group-v">
             <div class="title">产品</div>
-            <label><em>占地面积：</em><input type="text"></label>
-            <label><em>建筑面积：</em><input type="text"></label>
-            <label><em>地下面积：</em><input type="text"></label>
-            <label><em>面积率：</em><input type="text"></label>
-            <label><em>建筑密度：</em><input type="text"></label>
-            <label><em>绿化率：</em><input type="text"></label>
-            <label><em>户数：</em><input type="text"></label>
-            <label><em>停车：</em><input type="text"></label>
-        </div>
-        <div class="from-group-v">
-            <div class="title">开发</div>
-            <label><em>占地面积：</em><input type="text"></label>
-            <label><em>周期：</em><input type="text" id="dateStart">--<input type="text" id="dateEnd"></label>
-            <label><em>地下面积：</em><input type="text"></label>
-            <label><em>面积率：</em><input type="text"></label>
-            <label><em>建筑密度：</em><input type="text"></label>
-            <label><em>绿化率：</em><input type="text"></label>
-            <label><em>户数：</em><input type="text"></label>
-            <label><em>停车：</em><input type="text"></label>
-        </div>
-        <div class="from-group-v">
-            <div class="title">产品</div>
-            <label><em>占地面积：</em><input type="text"></label>
-            <label><em>建筑面积：</em><input type="text"></label>
-            <label><em>地下面积：</em><input type="text"></label>
-            <label><em>面积率：</em><input type="text"></label>
-            <label><em>建筑密度：</em><input type="text"></label>
-            <label><em>绿化率：</em><input type="text"></label>
-            <label><em>户数：</em><input type="text"></label>
-            <label><em>停车：</em><input type="text"></label>
-        </div>
-        <div class="from-group-v">
-            <div class="title">产品</div>
-            <label><em>占地面积：</em><input type="text"></label>
-            <label><em>建筑面积：</em><input type="text"></label>
-            <label><em>地下面积：</em><input type="text"></label>
-            <label><em>面积率：</em><input type="text"></label>
-            <label><em>建筑密度：</em><input type="text"></label>
-            <label><em>绿化率：</em><input type="text"></label>
-            <label><em>户数：</em><input type="text"></label>
-            <label><em>停车：</em><input type="text"></label>
+            <label><em>地形：</em><input type="text"></label>
+            <label><em>高度：</em><input type="text"></label>
+            <label><em>风格：</em><input type="text"></label>
+            <label><em>户型：</em><input type="text"></label>
+            <label><em>精装：</em><input type="text"></label>
+            <label><em>绿建：</em><input type="text"></label>
         </div>
 	</div>
+    <div class="clearfix">
+        <div class="from-group-v">
+            <div class="title">开发</div>
+            <label><em>总投资：</em><input type="text"></label>
+            <label><em>周期：</em><input type="text" id="dateStart">--<input type="text" id="dateEnd"></label>
+            <label><em>单方售价：</em><input type="text"></label>
+            <label><em>单方成本：</em><input type="text"></label>
+            <label><em>采购：</em><input type="text"></label>
+        </div>
+        <div class="from-group-v">
+            <div class="title">团队</div>
+            <label><em>占地面积：</em><input type="text"></label>
+            <label><em>建筑面积：</em><input type="text"></label>
+            <label><em>地下面积：</em><input type="text"></label>
+            <label><em>面积率：</em><input type="text"></label>
+            <label><em>建筑密度：</em><input type="text"></label>
+            <label><em>绿化率：</em><input type="text"></label>
+            <label><em>户数：</em><input type="text"></label>
+            <label><em>停车：</em><input type="text"></label>
+        </div>
+        <div class="from-group-v">
+            <div class="title">相关文件</div>
+            <label><em>占地面积：</em><input type="text"></label>
+            <label><em>建筑面积：</em><input type="text"></label>
+            <label><em>地下面积：</em><input type="text"></label>
+            <label><em>面积率：</em><input type="text"></label>
+            <label><em>建筑密度：</em><input type="text"></label>
+            <label><em>绿化率：</em><input type="text"></label>
+            <label><em>户数：</em><input type="text"></label>
+            <label><em>停车：</em><input type="text"></label>
+        </div>
+    </div>
 
     <div class="relative-activity">
         <div class="title">
@@ -162,6 +165,10 @@
 <script src="../../zhstatic/js/lib/jquery.min.js"></script>
 <script src="../../zhstatic/js/lib/plupload.min.js"></script>
 <script src="../../zhstatic/js/lib/datetimePicker.js"></script>
+<script src="../../zhstatic/js/module/uploadCover.js"></script>
+<script src="../../zhstatic/js/module/upload.js"></script>
+
+
 
 <script src="../../zhstatic/js/page/pubWork.js"></script>
 

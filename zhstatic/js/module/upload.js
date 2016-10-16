@@ -1,10 +1,3 @@
-var coverObj = {}; // 附件-应用图标
-
-/**
- * Created by DAY on 16/10/4.
- */
-attachUpload('cover-attach-container', 'cover-add-attach-button', 'cover-attach-button-wrapper', 20, coverObj);
-
 /**
  * 附件上传方法 -到阿里云
  * @param attachBox  附件容器
@@ -13,7 +6,7 @@ attachUpload('cover-attach-container', 'cover-add-attach-button', 'cover-attach-
  * @param limit 限制上传个数
  * @param obj 数据
  */
-function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
+function upLogo(attachBox, addBtn, addBtnWrapper, limit, obj) {
     var userid = "123",
         attachContainer = $('#' + attachBox),
         addAttachButton = $('#' + addBtn);
@@ -56,17 +49,39 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
         }
     }
 
+
+    function previewAttach(file, callback) {
+        var filename = file.name;
+        var attachType = "";
+        if (filename.indexOf(".doc") > 0) {
+            attachType = "word";
+        } else if (/(jpg|gif|png|JPG|GIF|PNG|JPEG|jpeg)$/.test(filename)) {
+            attachType = "images";
+        } else if (filename.indexOf(".xls") > 0) {
+            attachType = "excel";
+        } else if (filename.indexOf(".ppt") > 0) {
+            attachType = "ppt";
+        } else if (filename.indexOf(".zip") > 0 || filename.indexOf(".rar") > 0) {
+            attachType = "compressed";
+        } else if (filename.indexOf(".pdf") > 0) {
+            attachType = "pdf";
+        } else if (filename.indexOf(".txt") > 0 || filename.indexOf(".rtf") > 0) {
+            attachType = "plain-text";
+        } else {
+            attachType = "cloud";
+        }
+
+        callback && callback(attachType);
+    }
+
     function get_signature(callbackFun) {
         $.ajax({
             type: "get",
             async: false,
-            //url: "http://122.224.199.228:8060/service/osssignature",
-            //url: "http://122.224.199.228:8080/service/osssignature",
-            url: "http://112.124.3.182:8080/service/osssignature",
+            url: "http://www.homeownership.cn/upload.oss",
             dataType: "jsonp",
             contentType: "application/json",
             jsonp: "callback",
-            //jsonpCallback: "",
             success: function (data) {
                 var obj = typeof data == "object" ? data : JSON.parse(data);
                 host = obj['host'];
@@ -78,7 +93,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 callbackFun();
             },
             error: function () {
-                alert('获取签名信息失败');
+                notie.alert(3, '获取签名信息失败', 2);
             }
         });
     }
@@ -86,6 +101,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
     function set_upload_param(up, callbackFun) {
         //可以判断当前expire是否超过了当前时间,如果超过了当前时间,就重新取一下.3s 做为缓冲
         var now = Date.parse(new Date()) / 1000;
+
         var expireFlag = expire < now + .3;
         if (expireFlag) {
 
@@ -146,7 +162,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 if (totalLength > limit) {
                     up.splice(size <= limit ? size : limit, totalLength - limit);
                     files.splice(limit - size, totalLength - limit);
-                    alert("最多上传" + limit + "个");
+                    notie.alert(3, "最多上传" + limit + "个", 2);
                 }
                 plupload.each(files, function (file) {
                     var fileid = file.id;
@@ -171,8 +187,12 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 set_upload_param(up, function () {
                     if (info.status == 200) {
                         var response = JSON.parse(info.response);
-                        obj[file.id] = response.id;
-                        console.log(obj);
+                        obj[file.id] = {
+                            id: response.id,
+                            url: response.url
+                        };
+                        console.log(obj[file.id]);
+
                     }
                 });
 
@@ -182,14 +202,15 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
             Error: function (up, args) {
                 switch (args.code) {
                     case -601:
-                        alert("只能上传图片");
+                        notie.alert(3, "只能上传图片", 2);
                         break;
                     case -602:
-                        alert("不能重复上传");
+                        notie.alert(3, "不能重复上传", 2);
                         break;
                 }
             }
         }
     });
+
     attachUploader.init();
 }

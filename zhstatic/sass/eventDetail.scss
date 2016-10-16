@@ -1,0 +1,130 @@
+@import "base/_mixin",
+"base/_variables",
+"base/base",
+"base/common";
+
+.main-container {
+    .banner {
+        position: relative;
+        height: 400px;
+        background-color: #ccc;
+        p {
+            padding-top: 360px;
+            span {
+                margin-left: 10px;
+                i {
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background: #222;
+                }
+                em {
+
+                }
+            }
+        }
+    }
+
+}
+
+.layout {
+    h4 {
+        margin: 30px 0;
+        font-size: 28px;
+    }
+    .list {
+        li{
+            line-height: 30px;
+        }
+    }
+    h5 {
+        font-size: 20px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    .users {
+        img {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            float: left;
+            margin-right: 22px;
+            margin-top: 114px;
+        }
+    }
+    .enter {
+        width: 100px;
+        @include button($height: 46px);
+        margin-top: 58px;
+
+    }
+    .tips {
+        margin-top: 45px;
+        margin-bottom: 125px;
+    }
+    .comment {
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    .login {
+        margin-bottom: 24px;
+    }
+    .content {
+        img {
+            float: left;
+            width: 60px;
+            height: 60px;
+            background: #ccc;
+            margin-right: 10px;
+        }
+        textarea {
+            float: left;
+            padding: 5px;
+            width: 1050px;
+            height: 100px;
+        }
+
+    }
+    .pub {
+        .submit {
+            width: 64px;
+            float: right;
+            @include button($height: 40px, $padding: 0, $backgroundColor: #333);
+            margin-top: 18px;
+        }
+    }
+
+    .commentList {
+        margin-top: 45px;
+        height: 196px;
+        border-top: 1px solid #ccc;
+
+        h4 {
+            font-size: 30px;
+
+        }
+        .userlist {
+            img {
+                width: 60px;
+                height: 60px;
+                float: left;
+                margin-right: 10px;
+                background: #ccc;
+            }
+        }
+    }
+    .commentLists {
+        margin-top: 20px;
+        border-top: 1px solid #ccc;
+        padding-top: 14px;
+        img {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-right: 10px;
+            background: #ccc;
+        }
+
+    }
+
+}

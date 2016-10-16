@@ -14,65 +14,105 @@
         font-size: 14px;
         cursor: pointer;
     }
-    .mini-layout{
-        .from-group{
-            padding: 30px 0 30px;
-            border-bottom: 1px solid $baseBorder;
-            .input-title{
-                border: none;
-                width: 100%;
-                height: 50px;
-                font-size: 26px;
-            }
-            label{
-                display: inline-block;
-                width: 49%;
-
-                em{
-                    display: inline-block;
-                    width: 100px;
-                    text-align: right;
-                }
-
+    .layout{
+        h4{
+            font-size:20px;
+            margin-bottom:50px;
+        }
+        .list{
+            li{
+                float: left;
+                width: 285px;
             }
         }
-        .speaker{
-            .title{
-                padding-top:10px;
-                line-height: 40px;
-                font-size: 20px;
+        h5{
+            font-size:20px;
+            margin-top:50px;
+            margin-bottom:30px;
+        }
+        .users{
+            img{
+                width:100px;
+                height:100px;
+                background:#ccc;
+                float:left;
+                margin-right:22px;
+                margin-top:114px;
             }
-            .avatar-img{
-                height: 230px;
-                width: 230px;
-                background-color: $inputGray;
-                text-align: center;
-                line-height:230px;
-                cursor: pointer;
-            }
-            .speaker-title{
-                line-height: 40px;
-                height: 40px;
+        }
+        .enter{
+            width: 100px;
+            @include button($height:46px);
+            margin-top:58px;
+
+        }
+        .tips{
+            margin-top:45px;
+            margin-bottom:125px;
+        }
+        .comment{
+            font-weight:400;
+            margin-bottom:15px;
+        }
+        .login{
+            margin-bottom:24px;
+        }
+        .content{
+            img{
+                float:left;
+                width:60px;
+                height:60px;
+                background:#ccc;
+                margin-right:10px;
             }
             textarea{
-                border: none;
-                background-color: $baseBorder;
+                float:left;
                 padding: 5px;
-                width: 690px;
-                height: 220px;
+                width: 1050px;
+                height:100px;
+            }
+
+        }
+        .pub{
+            .submit{
+                width:64px;
+                float:right;
+                @include button($height:40px,$padding:0,$backgroundColor:#333);
+                margin-top:18px;
             }
         }
 
-        .submit{
-            margin: 0 10px;
-            @include button($height:40px)
-        }
-        .back{
-            margin: 0 10px;
-            border: 1px solid $baseBorder;
-            @include button($height:40px,$color: #333,$backgroundColor:#fff);
-        }
+        .commentList{
+            margin-top:45px;
+            height:196px;
+            border-top:1px solid #ccc;
 
+            h4{
+                font-size:30px;
+
+            }
+            .userlist{
+                img{
+                    width:60px;
+                    height:60px;
+                    float:left;
+                    margin-right:10px;
+                    background:#ccc;
+                }
+            }
+        }
+        .commentLists{
+            margin-top:20px;
+            border-top:1px solid #ccc;
+            padding-top:14px;
+            img{
+                width:60px;
+                height:60px;
+                float:left;
+                margin-right:10px;
+                background:#ccc;
+            }
+        }
     }
 }
 
@@ -80,80 +120,4 @@
 
 
 
-.layout{
-    h4{
-    font-size:20px;
-    margin-bottom:50px;
-    }
-    .list{
-        li{
-            float: left;
-            width: 285px;
-        }
-    }
-    h5{
-    font-size:20px;
-    margin-top:50px;
-    margin-bottom:30px;
-    }
-    .users{
-        img{
-            width:100px;
-            height:100px;
-            background:#ccc;
-            float:left;
-            margin-right:22px;
-            margin-top:114px;
-        }
-    }
-    .enter{
-        width: 100px;
-        @include button($height:46px);
-        margin-top:58px;
-       
-    }
-    .tips{
-        margin-top:45px;
-        margin-bottom:125px;
-    }
-    .comment{
-    font-weight:400;
-    margin-bottom:15px;
-    }
-    .login{
-    margin-bottom:24px;
-    }
-    .content{
-        img{
-            float:left;
-            width:60px;
-            height:60px;
-            background:#ccc;
-            margin-right:10px;
-        }
-        textarea{
-            float:left;
-            padding: 5px;
-            width: 1050px;
-            height:100px;
-        }
-        
-    }
-    .pub{
-        .submit{
-            width:64px;
-            float:right;
-            @include button($height:40px,$padding:0,$backgroundColor:#333);
-            margin-top:18px;
-        }
-    }
 
-    .commentList{
-        h3{
-            font-size:30px;
-
-        }
-    }
-    
-    
-}
