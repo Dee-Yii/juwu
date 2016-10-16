@@ -11,65 +11,92 @@
 	<div class="table">
 		<div class="heade">
 			<a class="bg" href="javascript:;">个人资料</a>
-			<a href="javascript:;">修改密码</a>
-			<a href="javascript:;">退出登录</a>
+			<a href="javascript:;" class="correct-pwd-btn">修改密码</a>
+			<a href="javascript:;" class="login-out-btn">退出登录</a>
 		</div>
-		<ul class="body">
-			<li>
-				<label>头像</label>
-				<ul id="avatr-attach-container">
-					<li><a href="javascript:;">+</a></li>
+		<div class="tab-box">
+			<div class="personal-info tabs">
+				<ul class="body">
+					<li>
+						<label>头像</label>
+						<ul id="avatr-attach-container">
+							<li><a href="javascript:;">+</a></li>
+						</ul>
+					</li>
+					<li>
+						<label>用户名</label>
+						<input type="text" value="15234546378" disabled="disabled">
+					</li>
+					<li>
+						<label>真实姓名</label>
+						<input type="text">
+						<p>您的真实姓名，在找回密码或个人页面展示等需要用到。</p>
+					</li>
+					<li>
+						<label>邮箱</label>
+						<input type="text">
+						<p>当有重要信息时，我们会在第一时间发送到您邮箱！</p>
+					</li>
+					<li>
+						<label>手机</label>
+						<input type="text">
+						<p>请填写您的手机号码，当我们需要通过电话联系您时，确保我们能联系得到。</p>
+					</li>
+					<li>
+						<label>国籍</label>
+						<select name="" id="">
+							<option value="">中国(CN)</option>
+							<option value="">美国(US)</option>
+						</select>
+						<p>请填写您在的国籍，方便我们为您提供更优质的服务。</p>
+					</li>
+					<li>
+						<label>生日</label>
+						<input type="text" placeholder="2016-01-01">
+						<p>请准确告知您的生日，请放心，我们会严格保密。</p>
+					</li>
+					<li>
+						<label>性别</label>
+						<select name="" id="">
+							<option value="">男</option>
+							<option value="">女</option>
+						</select>
+						<p>在不定期举行的活动中，会派送小礼物，您的性别会决定您的礼物是什么。</p>
+					</li>
+					<li>
+						<label>所在城市</label>
+						<select name="" id="">
+							<option value="">上海</option>
+						</select>
+						<p>方便我们告知您所在城市最新的官方活动。</p>
+					</li>
 				</ul>
-			</li>
-			<li>
-				<label>用户名</label>
-				<input type="text">
-			</li>
-			<li>
-				<label>真实姓名</label>
-				<input type="text">
-			</li>
-			<li>
-				<label>邮箱</label>
-				<input type="text">
-			</li>
-			<li>
-				<label>手机</label>
-				<input type="text">
-			</li>
-			<li>
-				<label>国籍</label>
-				<select name="" id="">
-					<option value="">中国(CN)</option>
-					<option value="">美国(US)</option>
-				</select>
-			</li>
-			<li>
-				<label>生日</label>
-				<input type="text">
-			</li>
-			<li>
-				<label>性别</label>
-				<select name="" id="">
-					<option value="">男</option>
-					<option value="">女</option>
-				</select>
-			</li>
-			<li>
-				<label>所在城市</label>
-				<select name="" id="">
-					<option value="">上海</option>
-				</select>
-			</li>
-		</ul>
-		<div class="tc mt50">
-			<a href="javascript:;" class="submit">保存</a>
+				<div class="tc mt50">
+					<a href="javascript:;" class="submit">保存</a>
+				</div>
+			</div>
+			<!-- 修改密码 -->
+			<div class="correct-password tabs">
+				<h3>修改密码</h3>
+				<ul>
+					<li>
+						<label for="">修改密码</label>
+						<input type="password" placeholder="新密码">
+					</li>
+					<li>
+						<label for=""></label>
+						<input type="password" placeholder="确认新密码">
+					</li>
+					<li>
+						<label for=""></label>
+						<a href="javascript:;" class="submit-btn">保存修改</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
-
 <script src="../../zhstatic/js/lib/jquery.min.js"></script>
-
 <script src="../../zhstatic/js/page/userSettings.js"></script>
 
 <!--<script src="../../zhstatic/js/require.js" data-main="../../zhstatic/js/common"></script>-->
