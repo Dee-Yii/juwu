@@ -41,7 +41,7 @@ nav{
     width: $miniWidth;
     margin: 0 auto;
 }
-input[type=text]{
+input[type=text],input[type='password']{
     border: 1px solid $baseBorder;
     height: 26px;
     width: 190px;
@@ -133,6 +133,11 @@ textarea{
             width: 290px;
             border-radius: 4px;
             margin-bottom: 15px;
+        }
+        .forget-register-box{
+            a{
+                color:#4c5e70;
+            }
         }
 
     }
