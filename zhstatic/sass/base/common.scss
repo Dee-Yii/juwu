@@ -41,6 +41,9 @@ nav{
     width: $miniWidth;
     margin: 0 auto;
 }
+body{
+    min-width: $mainWidth;
+}
 input[type=text],input[type='password']{
     border: 1px solid $baseBorder;
     height: 26px;

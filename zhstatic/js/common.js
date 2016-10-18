@@ -28,27 +28,28 @@ var common = {
             $("#loginModal").fadeIn();
         });
         $(".J_submitLogin").on("click", function(){
-            var phone = $("#tel-number").val().trim() || "13390517165";
-            var password = $("#password").val().trim() || "123456";
+//          var phone = $("#tel-number").val().trim() || "13390517165";
+//          var password = $("#password").val().trim() || "123456";
+			var inlogin = JSON.stringify({"phone": $("#tel-number").val(),"password": $("#password").val()});
+
+			console.log(inlogin)
             $.ajax({
-                type: "post",
+                type: "POST",
                 url: "http://www.homeownership.cn/login.action",
                 dataType: "json",
-                data: {
-                    "password": password,
-                    "phone": phone
-                },
+                data: inlogin,
                 success: function (data) {
-                    var data = {
-                        userid: 1,
-                        imgurl: "../../zhstatic/images/userCenter/product.jpg",
-                        credits:300,
-                        message:2
-                    }
+                	console.log(data)
+//                  var data = {
+//                      userid: 1,
+//                      imgurl: "../../zhstatic/images/userCenter/product.jpg",
+//                      credits:300,
+//                      message:2
+//                  }
                     sessionStorage.advmasterid = data;
                     $("#avatar").attr("src",data.imgurl);
                     $("#credits").text(data.credits);
-                    $(".message").text(date.message);
+//                  $(".message").text(date.message);//这个东西没有找到
                     $(".logined").show().siblings(".login").hide();
                     $(".modal-container").fadeOut();
                 },
