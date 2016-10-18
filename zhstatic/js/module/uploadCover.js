@@ -15,6 +15,7 @@ attachUpload('cover-attach-container', 'cover-add-attach-button', 'cover-attach-
  */
 function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
     var userid = "123",
+        dir = "",
         attachContainer = $('#' + attachBox),
         addAttachButton = $('#' + addBtn);
 
@@ -73,6 +74,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 signature = obj['signature'];
                 expire = parseInt(obj['expire']);
                 callbackbody = obj['callback'];
+                dir = obj['dir'];
                 callbackFun();
                 console.log(data)
             },
@@ -94,7 +96,7 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 set_upload_param(up, callbackFun);
             });
         } else {
-            var key = userid + "/" + new Date().getTime();
+            var key = dir + "/" + new Date().getTime();
             up.setOption({
                 'url': host,
                 'multipart_params': {
@@ -172,9 +174,9 @@ function attachUpload(attachBox, addBtn, addBtnWrapper, limit, obj) {
                 set_upload_param(up, function () {
                     if (info.status == 200) {
                         var response = JSON.parse(info.response);
-                        obj[file.id] = response.id;
-                        console.log(obj);
-                        console.log(response);
+                        obj[file.id] = file.name;
+                        console.log(file);
+                        console.log(info);
                     }
                 });
 
