@@ -17,7 +17,10 @@ var page = {
             $(".nav-bar").addClass("bgColor");
             $(".logo").addClass("fntColor");
             var scrollTop = $(window).scrollTop();
-            if(scrollTop >= 600){
+            // console.log($(".search-box")[0].offsetTop)
+            // console.log($(window).scrollTop())
+            // console.log($(".search-box")[0].offsetTop - $(window).scrollTop())
+            if($(".search-box")[0].offsetTop - $(window).scrollTop() <= 0){
                 $(".search-box").addClass("fixed");
             }else{
                 $(".search-box").removeClass("fixed");

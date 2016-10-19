@@ -12,143 +12,15 @@ body{
 	padding-top:79px;
     background: #fff;
 }
-nav{
-	top:0;
-	left:0;
-	z-index:1000;
-	.nav-box{
-			margin:0 auto;
-			width:1200px;
-			line-height:70px;
-			text-align:right;
-			@extend .clearfix;
-			.search-box{
-				margin-top:14px;
-				margin-left:207px;
-				float:left;
-				width:616px;
-				input{
-					float:left;
-					margin-right:13px;
-					border:1px solid #eee;
-					padding-left:20px;
-					width:476px;
-					height:50px;
-					line-height:50px;
-					background:url("../../zhstatic/images/search.jpg") 463px center no-repeat #fff;
-					font-size:16px;
-					color:#c7c7c7;
-				}
-				a{
-					float:left;
-					display:inline-block;
-					width:99px;
-					height:52px;
-					line-height:52px;
-					text-align:center;
-					font-size:16px;
-					color:#fff;
-					background:#ff5e16;
-				}
-			}
-			.logo{
-				float:left;
-				font-size:20px;
-				color:#ff601c;
-				line-height:79px;
-			}
-			.login-box{
-				float:right;
-				a{
-					display:block;
-					float:left;
-					font-size:16px;
-					color:#282723;
-				}
-				.login{
-					margin-right:42px;
-				}
-				.logined{
-					float:left;
-					padding-bottom:10px;
-					position:relative;
-					margin-top:10px;
-					margin-right:42px;
-					width:60px;
-					height:60px;
-					img{
-						display:block;
-						border-radius:50%;
-						width:100%;
-						height:100%;
-					}
-					.person-center{
-						display:none;
-						border:1px solid #eee;
-						position:absolute;
-						bottom:-252px;
-						left:-100px;
-						width:239px;
-						background:#fff;
-						li{
-							width:100%;
-							height:40px;
-							a{
-								display:block;
-								width:100%;
-								height:100%;
-								text-align:left;
-								line-height:40px;
-								i{
-									display:inline-block;
-									margin:0 6px 0 20px;
-									width:12px;
-									height:12px;
-									background:#f00;	
-									vertical-align:middle;					
-								}
-								span{
-									font-size:14px;
-									color:#363032;
-									vertical-align:middle;	
-								}
-								.message{
-									margin-left:4px;
-									display:inline-block;
-									border-radius:50%;
-									width:16px;
-									height:16px;
-									background:#e24d37;
-									text-align:center;
-									color:#fff;
-									line-height:16px;
-									vertical-align:middle;	
-								}
-							}
-						}
-						.login-out-box{
-							border-top:1px solid #eee;
-							height:50px;
-							a{
-								line-height:50px;
-							}
-						}
-					}
-				}
-			}
-			
-		}
-}
 .banner{
 	position:relative;
-	width:100%;
 	img{
 		width:100%;
 	}
 	.info-box{
 		position:relative;
 		margin:0 auto;
-		width:1200px;
+		width:$mainWidth;
 		.inner-box{
 			position:absolute;
 			left:0;
@@ -196,15 +68,11 @@ nav{
 			}
 
 		}
-		/* position:absolute;
-		bottom:4px;
-		left:0px; */
-		
 	}
 }
 .content-box{
 	margin:0 auto;
-	width:1200px;
+	width:$mainWidth;
 	h3{
 		font-size:16px;
 		color:#333;
@@ -251,7 +119,7 @@ nav{
 	position:relative;
 	margin:0 auto;
 	border-top:1px solid #c9c9c9;
-	width:1200px;
+	width:$mainWidth;
 	ul{
 		&::after{
 			@extend .clearfix;
@@ -288,7 +156,7 @@ nav{
 }
 ul{
 	margin:0 auto;
-	width:1200px;
+	width:$mainWidth;
 }
 .horizontal-box{
 	&::after{
@@ -298,9 +166,8 @@ ul{
 		position:relative;
 		float:left;
 		margin:71px 0 0 30px;
-		width:359px;
+		width:350px;
 		.opus{
-			width:100%;
 			display:block;
 			img{
 				width:100%;
@@ -336,7 +203,6 @@ ul{
 			}
 		}
 		.edit-box{
-			width:100%;
 			height:230px;
 			line-height:230px;
 		}
@@ -377,7 +243,7 @@ ul{
 			}
 			.instruct{
 				float:left;
-				width:855px;
+				width:795px;
 				h3{
 					line-height:42px;
 					font-size:18px;
@@ -435,7 +301,7 @@ ul{
 			overflow:hidden;
 			text-overflow:ellipsis;
 			white-space:nowrap;
-			max-width:1120px;
+			max-width:1060px;
 		}
 	}	
 }
@@ -458,7 +324,7 @@ ul{
 /* 收藏 */
 .collect-box{
 	margin:0 auto 27px auto;
-	width:1200px;
+	width:$mainWidth;
 	.collect-bar{
 		a{
 			padding: 0 32px 0 24px;
