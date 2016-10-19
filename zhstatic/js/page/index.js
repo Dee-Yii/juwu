@@ -38,8 +38,10 @@ var page = {
         /*banner轮播*/
         var mySwiper = new Swiper('.banner-container', {
             autoplay: 2000, //可选选项，自动滑动
-            loop:true
+            loop:true,
+            autoplayDisableOnInteraction:false
         });
+        mySwiper.onResize();
         /*设计师*/
         var peopleSwiper = new Swiper(".people-container",{
             autoplay:2000,
